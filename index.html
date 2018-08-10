@@ -14,7 +14,7 @@
     <link href="assets/css/normalize.css" rel="stylesheet">
     <link href="assets/css/milligram.min.css" rel="stylesheet">
     <!-- Icons -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- Main styles for this application -->
     <link href="assets/css/clay.css" rel="stylesheet">
     <link href="assets/css/animate.css" rel="stylesheet">
@@ -26,37 +26,110 @@
     <header>
         <h1><img src="imgs/logo-clay.svg" alt="Clay"></h1>
         <ul>
-            <li class="is-current"><a href="#">안녕, 클레이</a></li>
-            <li><a href="#">더 알아보기</a></li>
-            <li><a href="#">만드는 사람들</a></li>
-            <li><a href="#bottom"><i class="fa fa-question-circle"></i></a></li>
+            <li class="is-current"><a href="#hero" class="scroll">반가워요, 클레이!</a></li>
+            <li><a href="#security" class="scroll">왜 클레이일까요?</a></li>
+            <li><a href="#partners" class="scroll">신뢰받는 클레이</a></li>
+            <li><a href="#footer" class="scroll"><i class="fa fa-question-circle"></i></a></li>
         </ul>
     </header>
 
-    <section id="hero" class="wow animated fadeIn">
+    <section id="hero">
         <div class="container">
             <div class="headline wow animated fadeIn">
                 <h2 class="wow animated fadeIn" data-wow-delay="0.5s">내 손안에 크립토 월렛, <strong>클레이</strong></h2>
-                <p class="wow animated fadeIn" data-wow-delay="0.8s">여러 거래소와 지갑으로 나눠져 복잡한 크립토 자산 관리,<br/>거래소와 지갑을 한번에 모아주는 클레이와 함께 해요. <a href="#why">더 알아보기</a></p>
-                <div class="btns wow animated flash" data-wow-delay="1s">
-                    <a href="#"><i class="fa fa-google"></i>Google Play</a>
-                    <a href="#"><i class="fa fa-apple"></i>App Store</a>
+                <p class="wow animated fadeIn" data-wow-delay="0.8s">여러 거래소와 지갑으로 나눠져 복잡한 크립토 자산 관리,<br/>거래소와 지갑을 한번에 모아주는 클레이와 함께 해요. <a href="#security">더 알아보기</a></p>
+                <div class="btns wow animated flipInX" data-wow-delay="1s">
+                    <a href="#"><i class="fab fa-google"></i>Google Play</a>
+                    <a href="#"><i class="fab fa-apple"></i>App Store</a>
                 </div>
             </div>
-            <div class="screens wow animated fadeIn" data-wow-delay="1.5s">
+            <div class="screens wow animated pulse" data-wow-delay="1.5s">
                 <div class="screen">
                     <img src="imgs/screen0.png" alt="">
-                    <span class="wow animated fadeInDown" data-wow-delay="2s">거래소/지갑 모아서 봐요</span>
-                    <span class="wow animated fadeInUp" data-wow-delay="2.5s">실시간 변동율 확인해요</span>
+                    <span class="wow animated fadeInDown" data-wow-delay="2.5s">거래소/지갑 모아서 봐요</span>
+                    <span class="wow animated fadeInUp" data-wow-delay="3s">실시간 변동율 확인해요</span>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="partners" class="wow animated fadeIn">
+    
+    <section id="security" class="wait">
         <div class="container">
-            <h3 class="wow animated fadeIn" data-wow-delay="0.5s">믿을 수 있는 클레이, <strong>든든한 파트너사</strong></h3>
-            <ul>
+            <h2 class="wow animated fadeIn" data-wow-delay="0.5s">이렇게 쉽고 간편하고도, <strong>안전한 클레이</strong></h2>
+            <ul class="row">
+                <li class="column wow animated zoomIn" data-wow-delay="1s">
+                    <span><i class="far fa-thumbs-up"></i></span>
+                    <i class="fas fa-smile-wink"></i>
+                    <h5>Easy</h5>
+                    <p><strong>복잡한 거래소/지갑 연동,</strong><br/>클레이는 QR 코드와 카메라를 이용해 보다 쉬운 절차 생략이 가능해요. 지금 바로 등록하고 비교해 보세요.</p>
+                </li>
+                <li class="column wow animated zoomIn" data-wow-delay="2s">
+                    <span><i class="far fa-thumbs-up"></i></span>
+                    <i class="fa fa-lock"></i>
+                    <h5>Security</h5>
+                    <p>클레이는 프라이빗 키를 비롯한 사용자 정보를 안전하게 암호화하여 기기에 저장하며, <strong>중앙서버에 이를 보관하지 않아 해킹의 위험이 없어요.</strong></p>
+                </li>
+                <li class="column wow animated zoomIn" data-wow-delay="1.5s">
+                    <span><i class="far fa-thumbs-up"></i></span>
+                    <i class="fa fa-leaf"></i>
+                    <h5>Clear</h5>
+                    <p><strong>혼란스러운 데이터는 그만!</strong><br/>너무 많은 정보는 방해가 될 때가 있죠. 이제 클레이에서는 중요한 핵심 정보만 깔끔하게 확인하세요.</p>
+                </li>
+            </ul>
+            <!--div class="teams">
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Seungwoo Moon</strong>
+                    <em>CEO / Developer</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Kain Seo</strong>
+                    <em>CTO / Project Manager</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Sora Han</strong>
+                    <em>CDO / Lead Designer</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Hada Kang</strong>
+                    <em>Project Director</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Daniel Jee</strong>
+                    <em>Android Developer</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Daniel Jee</strong>
+                    <em>Android Developer</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Hakyung Kim</strong>
+                    <em>iOS Developer</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Hakyung Kim</strong>
+                    <em>iOS Developer</em>
+                </div>
+                <div>
+                    <span class="thumb">thumb</span>
+                    <strong>Saetbyeol Seo</strong>
+                    <em>Office Manager</em>
+                </div>
+            </div-->
+        </div>
+    </section>
+
+    <section id="partners" class="wait">
+        <div class="container">
+            <h2 class="wow animated fadeIn" data-wow-delay="0.5s">믿을 수 있는 클레이, <strong>파트너사</strong></h2>
+            <ul class="partners" class="wow animated fadeIn" data-wow-delay="1s">
                 <li class="wow animated flipInX" data-wow-delay="1s"><img src="imgs/logo-sp.png" alt="Sentinel protocol"></li>
                 <li class="wow animated flipInX" data-wow-delay="1.2s"><img src="imgs/logo-carry.png" alt="carry"></li>
                 <li class="wow animated flipInX" data-wow-delay="1.4s"><img src="imgs/logo-hashed.png" alt="hashed"></li>
@@ -66,10 +139,17 @@
                 <li class="wow animated flipInX" data-wow-delay="2.2s"><img src="imgs/logo-rcn.png" alt="rcn"></li>
                 <li class="wow animated flipInX" data-wow-delay="2.4s"><img src="imgs/logo-traceto.png" alt="traceto"></li>
             </ul>
+            <ul class="news wow animated fadeIn" data-wow-delay="1.5s">
+                <li><h3>미디어 속 클레이</h3></li>
+                <li><a href="#"><span>네이버뉴스</span> 50만 사용자 코인매니저의 크립토 월렛, 클레이 출시!</a></li>
+                <li><a href="#"><span>다음뉴스</span> 클레이의 성공 신화, 크립토 월렛계의 블루칩으로 자리잡다.</a></li>
+                <li><a href="#"><span>MSN IT</span> 긴 제목의 뉴스를 테스트합니다. 그래서 길게 길게 작성해봅니다. 자라잔.</a></li>
+                <li><a href="#"><span>MEDIUM</span> 50만 사용자 코인매니저의 크립토 월렛, 클레이 출시!</a></li>
+            </ul>
         </div>
     </section>
 
-    <footer id="bottom">
+    <footer id="footer">
         <div class="container">
             <div class="row">
                 <ul class="column column-50">
