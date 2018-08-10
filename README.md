@@ -9,3 +9,11 @@ Clay landing page concept.
 - spoqa han sans / for korean font
 - jquery
 - sass
+
+### Todo
+- Responsive for mobile
+- All texts fix & confirm
+- All links fix & confirm
+- Third page add
+  - ex) privacy, terms ...
+- Add Favicon
