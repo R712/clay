@@ -1,4 +1,4 @@
-# clay
+# Clay
 Clay landing page concept.
 
 ### Using
