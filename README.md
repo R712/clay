@@ -1,7 +1,10 @@
-# Clay
-Clay landing page concept.
+# Clay landing page design
+
+**Preview** https://r712.github.io/clay/
+
 
 ### Using
+
 - normalize / for modern browser
 - milligram / css framework
 - font-awesome / svg icon webfont
@@ -9,3 +12,13 @@ Clay landing page concept.
 - spoqa han sans / for korean font
 - jquery
 - sass
+
+
+### Todo
+
+- Responsive for mobile
+- All texts fix & confirm
+- All links fix & confirm
+- Third page add
+  - ex) privacy, terms ...
+- Add Favicon
