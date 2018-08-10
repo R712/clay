@@ -76,6 +76,13 @@ body {
 		-o-transition: all 0.5s ease-in-out;
 		transition: all 0.5s ease-in-out;
 	}
+    :hover {
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
 }
 
 .clay-body {
@@ -202,7 +209,9 @@ section {
         margin-bottom: 100px;
         font-size: 3.2rem;
         strong {
-            border-bottom: 4px double #FFF;
+            padding-bottom: 4px;
+            border-bottom: 4px solid rgba(255,255,255,.4);
+            border-radius: 2px;
         }
     }
 }
@@ -219,7 +228,7 @@ section {
             img {
                 position: relative;
                 display: inline-block;
-                width: 320px;
+                width: 375px;
                 border-radius: 40px;
                 box-shadow: 0 4px 150px rgba(17,31,73,.6);
             }
@@ -239,11 +248,13 @@ section {
         span {
             position: absolute;
             left: 50%;
-            top: 120px;
-            margin-left: -320px;
-            padding: 20px;
+            top: 130px;
+            margin-left: -360px;
+            padding: 0 2rem;
             background: #624FFF;
             color: #FFF;
+            font-size: 1.8rem;
+            line-height: 6rem;
             box-shadow: 0 4px 40px rgba(17,31,73,.4);
             &:after {
                 content: "";
@@ -258,9 +269,9 @@ section {
             &:last-child {
                 left: inherit;
                 right: 50%;
-                top: 420px;
+                top: 440px;
                 margin-left: 0;
-                margin-right: -320px;
+                margin-right: -370px;
                 background: #111F49;
                 &:after {
                     right: inherit;
@@ -274,16 +285,15 @@ section {
         color: #FFF;
         h2 {
             margin-bottom: 24px;
+            font-size: 4rem;
         }
         p {
-            font-size: 18px;
+            font-size: 2rem;
             line-height: 1.8;
             a {
-                color: #FFF;
-                border-bottom: 2px solid #FFF;
+                color: rgba(255,255,255,.6);
                 &:hover {
-                    border-bottom-color: #2AABFF;
-                    color: #2AABFF;
+                    color: #FFF;
                 }
             }
         }
@@ -379,7 +389,7 @@ section {
                 margin-top: 12px;
                 font-size: 72px;
                 line-height: 100px;
-                color: rgba(255,255,255,.4);
+                color: rgba(255,255,255,.25);
             }
             h5 {
                 margin-top: 12px;
@@ -418,11 +428,14 @@ section {
                 color: #ACB1C0;
                 border-radius: 24px;
                 i {
-                    color: rgba(255,255,255,.4);
+                    color: rgba(255,255,255,.25);
                     font-size: 72px;
                 }
                 p {
                     background: rgba(255,255,255,.1);
+                }
+                .far {
+                    opacity: 0;
                 }
                 &:hover {
                     z-index: 5;
@@ -458,7 +471,7 @@ section {
     h2 {
         color: #111F49;
         strong {
-            border-bottom-color: #111F49;
+            border-bottom-color: rgba(17,31,73,.4);
         }
     }
     .partners {
@@ -470,6 +483,15 @@ section {
                 max-width: 140px;
                 max-height: 40px;
                 vertical-align: middle;
+                cursor: pointer;
+            }
+        }
+        &:hover {
+            li {
+                opacity: .4;
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
     }
@@ -482,7 +504,7 @@ section {
         text-align: left;
         box-shadow: 0 4px 150px rgba(17,31,73,.6);
         h3 {
-            margin: 0 0 12px;
+            margin: 0 12px 12px;
             color: #111F49;
             font-weight: 600;
             font-size: 2rem;
@@ -491,7 +513,7 @@ section {
             margin: 0;
             a {
                 display: block;
-                padding: 10px 0;
+                padding: 12px;
                 border-top: 1px solid #F4F5F7;
                 color: #111F49;
                 white-space: nowrap;
@@ -507,6 +529,13 @@ section {
                     text-align: center;
                     border-radius: 3px;
                 }
+                &:hover {
+                    background: #F4F5F7;
+                    span {
+                        background: #624FFF;
+                        color: #FFF;
+                    }
+                }
             }
         }
     }
@@ -515,17 +544,24 @@ section {
 .wait {
     &:before {
         content: "작업중";
-        z-index: 100;
+        z-index: 50;
         position: absolute;
-        left: 0;
-        top: 100px;
-        width: 100%;
-        height: 100%;
+        right: 1rem;
+        bottom: 50%;
+        margin-bottom: -4rem;
+        padding: 0 2rem;
+        background: rgba(0,0,0,.2);
         color: #FFF;
-        font-size: 28rem;
-        line-height: 90vh;
-        text-shadow: 0 2px 32px rgba(17,31,73,.2);
+        font-size: 4rem;
+        line-height: 8rem;
         opacity: .6;
+    }
+    &:hover {
+        &:before {
+            background: #FFF;
+            color: #111F49;
+            opacity: 1;
+        }
     }
 }
 

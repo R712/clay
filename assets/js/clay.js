@@ -6,4 +6,12 @@ $(document).ready(function ($) {
             scrollTop: $(this.hash).offset().top
         }, 1500);
     });
+    $('header li a').click(function(){
+        $('header li').removeClass('is-current');
+        $(this).parent('li').addClass('is-current');
+    });
+    $('#hero p a').click(function(){
+        $('header li').removeClass('is-current');
+        $('header li:nth-child(2)').addClass('is-current');
+    });
 });
