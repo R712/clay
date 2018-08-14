@@ -22,3 +22,4 @@
 - Third page add
   - ex) privacy, terms ...
 - Add Favicon
+- Support Language 
