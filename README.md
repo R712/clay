@@ -22,4 +22,4 @@
 - Third page add
   - ex) privacy, terms ...
 - Add Favicon
-- Support Language 
+- Support Language EN/JP and more..?
