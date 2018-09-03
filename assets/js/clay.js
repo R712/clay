@@ -14,4 +14,8 @@ $(document).ready(function ($) {
         $('header li').removeClass('is-current');
         $('header li:nth-child(2)').addClass('is-current');
     });
+    $('[data-clayview-label]').click(function(){
+        $('[data-clayview-label]').removeClass('current').find('.screen').fadeOut(); 
+        $(this).addClass('current').find('.screen').fadeIn();
+    });
 });
