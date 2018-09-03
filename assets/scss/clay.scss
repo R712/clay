@@ -53,11 +53,6 @@ body {
 			-o-transition: all 0.2s ease;
 			transition: all 0.2s ease;
 		}
-		&:hover {
-			.fa {
-				color: #29ABFF;
-			}
-		}
         &:active,
         &:visited {
             color: #FFF;
@@ -95,7 +90,7 @@ body {
         text-align: center;
         border-radius: 50%;
         box-shadow: 0 0 24px rgba(0,0,0,.2);
-        .fa {
+        .fab {
             color: #ACB1C0 !important;
             font-size: 32px;
             line-height: 64px;
@@ -103,8 +98,8 @@ body {
         &:hover {
             width: 72px;
             height: 72px;
-            .fa {
-                font-size: 36px;
+            .fab {
+                color: #29ABFF !important;
                 line-height: 72px;
             }
         }
@@ -216,7 +211,7 @@ section {
     position: relative;
     display: table;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     color: #FFF;
     text-align: center;
     justify-content: center;
@@ -263,7 +258,7 @@ section {
         border: 2px solid rgba(255,255,255,.2);
         color: #FFF;
         font-size: 1.6vh;
-        line-height: 4vh;
+        line-height: 3.8vh;
         text-align: center;
         border-radius: 2vh;
         cursor: pointer;
@@ -319,6 +314,7 @@ section {
                 padding: 0 1.6vw;
                 background: #FFF;
                 color: #111F49;
+                font-family: 'Ubuntu';
                 font-weight: 600;
                 font-size: 1vw;
                 line-height: 3.2vw;
@@ -341,6 +337,21 @@ section {
                     opacity: 1;
                     .fab {
                         opacity: 1;
+                    }
+                }
+                &.wait,
+                &.wait:hover {
+                    opacity: .2 !important;
+                    &:after {
+                        content: "soon";
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding: 6px 10px;
+                        background: #624FFF;
+                        color: #FFF;
+                        font-size: 9px;
+                        line-height: 1;
                     }
                 }
             }
@@ -508,37 +519,34 @@ section {
             display: flex;
             flex-direction: column;
             float: left;
-            margin-top: 40px;
-            width: 25%;
+            padding-bottom: 10px;
+            width: 20%;
+            background: #FFF;
+            color: #111F49;
             cursor: help;
             .thumb {
                 display: block;
-                margin: 0 auto;
-                width: 130px;
-                height: 130px;
-                border: 5px solid transparent;
-                background: transparent;
-                border-radius: 65px;
+                margin: 0 auto 10px;
                 overflow: hidden;
                 img {
                     display: block;
                     min-height: 100%;
+                    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                    filter: grayscale(100%);
                 }
             }
             strong {
-                margin: 20px 0 0;
                 font-size: 16px;
                 font-family: 'Ubuntu';
             }
             em {
                 font-style: normal;
-                font-size: 14px;
+                font-size: 13px;
             }
             a {
                 position: absolute;
-                right: 50%;
-                top: 110px;
-                margin-right: -15px;
+                right: 0;
+                top: 0;
                 width: 30px;
                 height: 30px;
                 background: #111F49;
@@ -549,17 +557,11 @@ section {
                 }
             }
             &:hover {
-                .thumb {
-                    width: 130px;
-                    height: 130px;
-                    border: 0;
-                    border-radius: 65px;
-                    box-shadow: 0 0 32px rgba(0,0,0,.3);
-                    -webkit-transition: all 0.5s ease;
-                    -moz-transition: all 0.5s ease;
-                    -ms-transition: all 0.5s ease;
-                    -o-transition: all 0.5s ease;
-                    transition: all 0.5s ease;
+                z-index: 1;
+                box-shadow: 0 0 32px rgba(0,0,0,.3);
+                img {
+                    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+                    filter: none;
                 }
             }
         }
