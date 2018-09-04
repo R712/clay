@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Ubuntu:300,700";
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700";
 
 * {
 	margin: 0;
@@ -8,7 +8,7 @@
 }
 html {
 	height: 100%;
-	font-family: "Ubuntu", "Helvetica Neue", "Spoqa Han Sans", Arial, sans-serif;
+	font-family: "ubuntu", "Helvetica Neue", "Spoqa Han Sans", Arial, sans-serif;
     font-weight: regular;
 }
 body {
@@ -59,7 +59,7 @@ body {
         }
 	}
 	strong {
-		font-weight: 600;
+		font-weight: 700;
 	}
 	form {
 		margin: 0;
@@ -150,6 +150,9 @@ header {
     nav {
         float: right;
         margin: 0;
+        button {
+            display: none;
+        }
         li {
             float: left;
             margin-left: 40px;
@@ -158,7 +161,7 @@ header {
                 display: inline-block;
                 border-bottom: 0 solid transparent;
                 color: rgba(255, 255, 255, 0.6);
-                font-weight: 500;
+                font-weight: 700;
                 vertical-align: middle;
                 &:after {
                     content: "";
@@ -197,7 +200,7 @@ header {
         li.is-current {
             a {
                 color: #FFF;
-                font-weight: 600;
+                font-weight: 700;
                 text-decoration: none;
                 &:after {
                     width: 100%;
@@ -218,8 +221,9 @@ section {
     box-sizing: border-box;
 	*zoom: 1;
     h2 {
-        margin-bottom: 4vw;
-        font-size: 1.8vw;
+        margin-bottom: 32px;
+        font-size: 36px;
+        font-weight: 400;
         strong {
             padding-bottom: 4px;
             border-bottom: 4px solid rgba(255,255,255,.4);
@@ -230,10 +234,11 @@ section {
 		position: relative;
         display: table-cell;
 		margin: 0 auto;
-        padding: 0 5%;
+        padding: 50px 5%;
         vertical-align: middle;
         overflow: hidden;
     }
+    /*
 	&:after {
 		clear: both;
         content: "";
@@ -247,20 +252,32 @@ section {
         border: 0 solid transparent;
         border-width: 8vh 50vw;
 	}
+    */
+	&:after {
+		clear: both;
+        content: "";
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: url(../../imgs/bg_1.png) repeat-x left bottom;
+	}
     .page-next {
         z-index: 5;
         position: absolute;
         left: 50%;
-        bottom: 2vh;
-        margin-left: -2vh;
-        width: 4vh;
-        height: 4vh;
+        bottom: 12px;
+        margin-left: -32px;
+        width: 48px;
+        height: 48px;
         border: 2px solid rgba(255,255,255,.2);
         color: #FFF;
-        font-size: 1.6vh;
-        line-height: 3.8vh;
+        font-size: 18px;
+        line-height: 48px;
         text-align: center;
-        border-radius: 2vh;
+        border-radius: 24px;
         cursor: pointer;
         &:hover {
             background: rgba(255,255,255,.1);
@@ -269,7 +286,7 @@ section {
 }
 
 #hero {
-    background: #111F49;
+    background-color: #111F49;
     #world {
         position: fixed;
         left: 0;
@@ -292,12 +309,12 @@ section {
             box-shadow: 0 0 32px rgba(0,0,0,.25);
         }
         h2 {
-            margin-bottom: 1.6vw;
-            font-size: 2.4vw;
+            margin-bottom: 16px;
+            font-size: 36px;
             letter-spacing: -0.5px;
         }
         p {
-            font-size: 1.2vw;
+            font-size: 20px;
             line-height: 1.8;
             a {
                 color: rgba(255,255,255,.6);
@@ -310,20 +327,20 @@ section {
             a {
                 position: relative;
                 display: inline-block;
-                margin: 2vw .4vw 0;
-                padding: 0 1.6vw;
+                margin: 16px 8px 0;
+                padding: 0 24px;
                 background: #FFF;
                 color: #111F49;
-                font-family: 'Ubuntu';
-                font-weight: 600;
-                font-size: 1vw;
-                line-height: 3.2vw;
-                border-radius: 1.6vw;
+                font-family: 'ubuntu';
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 54px;
+                border-radius: 27px;
                 opacity: .6;
                 .fab {
                     margin: 0 16px 1px 0;
                     color: #111F49;
-                    font-size: 1vw;
+                    font-size: 18px;
                     opacity: .4;
                 }
                 &:first-child {
@@ -343,10 +360,10 @@ section {
                 &.wait:hover {
                     opacity: .2 !important;
                     &:after {
-                        content: "soon";
+                        content: "coming soon";
                         position: absolute;
-                        right: 0;
-                        top: 0;
+                        right: -5px;
+                        top: -5px;
                         padding: 6px 10px;
                         background: #624FFF;
                         color: #FFF;
@@ -431,7 +448,7 @@ section {
         }
     }
     &:after {
-        border-color: transparent #624FFF #624FFF transparent;
+        background-image: url(../../imgs/bg_1.png);
     }
 }
 
@@ -471,7 +488,7 @@ section {
             h4 {
                 font-size: 2vw;
                 font-weight: 700;
-                font-family: 'Ubuntu';
+                font-family: 'ubuntu';
                 opacity: .4;
             }
             p {
@@ -503,7 +520,7 @@ section {
         }
     }
     &:after {
-        border-color: transparent #29ABFF #29ABFF transparent;
+        background-image: url(../../imgs/bg_2.png);
     }
 }
 
@@ -512,7 +529,7 @@ section {
     background-size: cover;
     .teams {
         margin: 5vh auto 0;
-        max-width: 980px;
+        max-width: 880px;
         justify-content: center;
         > div {
             position: relative;
@@ -524,6 +541,7 @@ section {
             background: #FFF;
             color: #111F49;
             cursor: help;
+            box-shadow: 0 0 32px  rgba(17,31,73,.2);
             .thumb {
                 display: block;
                 margin: 0 auto 10px;
@@ -536,12 +554,12 @@ section {
                 }
             }
             strong {
-                font-size: 16px;
-                font-family: 'Ubuntu';
+                font-size: 15px;
+                font-family: 'ubuntu';
             }
             em {
                 font-style: normal;
-                font-size: 13px;
+                font-size: 12px;
             }
             a {
                 position: absolute;
@@ -555,10 +573,13 @@ section {
                 span {
                     display: none;
                 }
+                &:hover {
+                    background: #624FFF;
+                }
             }
             &:hover {
                 z-index: 1;
-                box-shadow: 0 0 32px rgba(0,0,0,.3);
+                box-shadow: 0 0 32px  rgba(17,31,73,.6);
                 img {
                     -webkit-filter: none; /* Safari 6.0 - 9.0 */
                     filter: none;
@@ -621,9 +642,9 @@ section {
             }
             h5 {
                 margin-top: 12px;
-                font-weight: 600;
+                font-weight: 700;
                 font-size: 2.8rem;
-                font-family: "Ubuntu";
+                font-family: "ubuntu";
             }
             p {
                 margin: 0;
@@ -673,7 +694,7 @@ section {
                     color: #111F49;
                     border-radius: 32px;
                     h5 {
-                        font-weight: 600;
+                        font-weight: 700;
                     }
                     i {
                         color: #624FFF;
@@ -696,7 +717,7 @@ section {
 }
 
 #partners {
-    background-color: #624FFF;
+    background: #624FFF;
     h2 {
         color: #111F49;
         strong {
@@ -704,11 +725,11 @@ section {
         }
     }
     .partners {
-        margin: 0 auto;
-        max-width: 980px;
+        margin: 50px auto;
+        max-width: 880px;
         li {
             display: inline-block;
-            margin: 0 24px 48px;
+            margin: 24px;
             opacity: .8;
             img {
                 max-width: 140px;
@@ -727,7 +748,7 @@ section {
         }
     }
     .news {
-        margin: 60px auto;
+        margin: 0 auto;
         width: 60%;
         max-width: 680px;
         padding: 40px;
@@ -737,7 +758,7 @@ section {
         h3 {
             margin: 0 12px 12px;
             color: #111F49;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 2rem;
         }
         li {
@@ -789,7 +810,7 @@ footer {
     text-align: left;
     overflow: hidden;
     h5 {
-        font-weight: 600;
+        font-weight: 700;
         font-size: 2rem;
     }
     a {
@@ -808,8 +829,8 @@ footer {
         padding-top: 32px;
         border-top: 2px solid rgba(0,0,0,.05);
         h6 {
-            font-weight: 600;
-            font-family: "Ubuntu";
+            font-weight: 700;
+            font-family: "ubuntu";
         }
         li {
             text-align: right;
@@ -818,4 +839,70 @@ footer {
             margin: 0 12px;
         }
     }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+header {
+    .logo {
+        h1 {
+            img {
+                width: 48px;
+            }
+        }
+    }
+    nav {
+        button {
+            z-index: 55;
+            position: fixed;
+            right: 12px;
+            top: 12px;
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #FFF;
+        }
+        ul {
+            display: none;
+        }
+    }
+}
+  
 }

@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Ubuntu:300,700";
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700";
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 
 html {
   height: 100%;
-  font-family: "Ubuntu", "Helvetica Neue", "Spoqa Han Sans", Arial, sans-serif;
+  font-family: "ubuntu", "Helvetica Neue", "Spoqa Han Sans", Arial, sans-serif;
   font-weight: regular;
 }
 
@@ -60,7 +60,7 @@ body a:active, body a:visited {
   color: #FFF;
 }
 body strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 body form {
   margin: 0;
@@ -152,6 +152,9 @@ header nav {
   float: right;
   margin: 0;
 }
+header nav button {
+  display: none;
+}
 header nav li {
   float: left;
   margin-left: 40px;
@@ -161,7 +164,7 @@ header nav li a {
   display: inline-block;
   border-bottom: 0 solid transparent;
   color: rgba(255, 255, 255, 0.6);
-  font-weight: 500;
+  font-weight: 700;
   vertical-align: middle;
 }
 header nav li a:after {
@@ -194,7 +197,7 @@ header nav li:last-child a:hover .fa {
 }
 header nav li.is-current a {
   color: #FFF;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 }
 header nav li.is-current a:after {
@@ -211,10 +214,26 @@ section {
   justify-content: center;
   box-sizing: border-box;
   *zoom: 1;
+  /*
+  &:after {
+  	clear: both;
+         content: "";
+         z-index: 1;
+         position: absolute;
+  	display: block;
+         left: 0;
+         bottom: 0;
+         width: 0;
+         height: 0;
+         border: 0 solid transparent;
+         border-width: 8vh 50vw;
+  }
+     */
 }
 section h2 {
-  margin-bottom: 4vw;
-  font-size: 1.8vw;
+  margin-bottom: 32px;
+  font-size: 36px;
+  font-weight: 400;
 }
 section h2 strong {
   padding-bottom: 4px;
@@ -225,7 +244,7 @@ section .container {
   position: relative;
   display: table-cell;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 50px 5%;
   vertical-align: middle;
   overflow: hidden;
 }
@@ -234,28 +253,26 @@ section:after {
   content: "";
   z-index: 1;
   position: absolute;
-  display: block;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-width: 8vh 50vw;
+  width: 100%;
+  height: 80px;
+  background: url(../../imgs/bg_1.png) repeat-x left bottom;
 }
 section .page-next {
   z-index: 5;
   position: absolute;
   left: 50%;
-  bottom: 2vh;
-  margin-left: -2vh;
-  width: 4vh;
-  height: 4vh;
+  bottom: 12px;
+  margin-left: -32px;
+  width: 48px;
+  height: 48px;
   border: 2px solid rgba(255, 255, 255, 0.2);
   color: #FFF;
-  font-size: 1.6vh;
-  line-height: 3.8vh;
+  font-size: 18px;
+  line-height: 48px;
   text-align: center;
-  border-radius: 2vh;
+  border-radius: 24px;
   cursor: pointer;
 }
 section .page-next:hover {
@@ -263,7 +280,7 @@ section .page-next:hover {
 }
 
 #hero {
-  background: #111F49;
+  background-color: #111F49;
 }
 #hero #world {
   position: fixed;
@@ -288,12 +305,12 @@ section .page-next:hover {
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.25);
 }
 #hero .headline h2 {
-  margin-bottom: 1.6vw;
-  font-size: 2.4vw;
+  margin-bottom: 16px;
+  font-size: 36px;
   letter-spacing: -0.5px;
 }
 #hero .headline p {
-  font-size: 1.2vw;
+  font-size: 20px;
   line-height: 1.8;
 }
 #hero .headline p a {
@@ -305,21 +322,21 @@ section .page-next:hover {
 #hero .headline .btns a {
   position: relative;
   display: inline-block;
-  margin: 2vw 0.4vw 0;
-  padding: 0 1.6vw;
+  margin: 16px 8px 0;
+  padding: 0 24px;
   background: #FFF;
   color: #111F49;
-  font-family: "Ubuntu";
-  font-weight: 600;
-  font-size: 1vw;
-  line-height: 3.2vw;
-  border-radius: 1.6vw;
+  font-family: "ubuntu";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 54px;
+  border-radius: 27px;
   opacity: 0.6;
 }
 #hero .headline .btns a .fab {
   margin: 0 16px 1px 0;
   color: #111F49;
-  font-size: 1vw;
+  font-size: 18px;
   opacity: 0.4;
 }
 #hero .headline .btns a:first-child {
@@ -339,10 +356,10 @@ section .page-next:hover {
   opacity: 0.2 !important;
 }
 #hero .headline .btns a.wait:after, #hero .headline .btns a.wait:hover:after {
-  content: "soon";
+  content: "coming soon";
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -5px;
+  top: -5px;
   padding: 6px 10px;
   background: #624FFF;
   color: #FFF;
@@ -421,7 +438,7 @@ section .page-next:hover {
   border-color: transparent transparent #111F49 #111F49;
 }
 #hero:after {
-  border-color: transparent #624FFF #624FFF transparent;
+  background-image: url(../../imgs/bg_1.png);
 }
 
 #clayview {
@@ -460,7 +477,7 @@ section .page-next:hover {
 #clayview ul li h4 {
   font-size: 2vw;
   font-weight: 700;
-  font-family: "Ubuntu";
+  font-family: "ubuntu";
   opacity: 0.4;
 }
 #clayview ul li p {
@@ -488,7 +505,7 @@ section .page-next:hover {
   opacity: 1;
 }
 #clayview:after {
-  border-color: transparent #29ABFF #29ABFF transparent;
+  background-image: url(../../imgs/bg_2.png);
 }
 
 #clayteam {
@@ -497,7 +514,7 @@ section .page-next:hover {
 }
 #clayteam .teams {
   margin: 5vh auto 0;
-  max-width: 980px;
+  max-width: 880px;
   justify-content: center;
 }
 #clayteam .teams > div {
@@ -510,6 +527,7 @@ section .page-next:hover {
   background: #FFF;
   color: #111F49;
   cursor: help;
+  box-shadow: 0 0 32px rgba(17, 31, 73, 0.2);
 }
 #clayteam .teams > div .thumb {
   display: block;
@@ -524,12 +542,12 @@ section .page-next:hover {
   filter: grayscale(100%);
 }
 #clayteam .teams > div strong {
-  font-size: 16px;
-  font-family: "Ubuntu";
+  font-size: 15px;
+  font-family: "ubuntu";
 }
 #clayteam .teams > div em {
   font-style: normal;
-  font-size: 13px;
+  font-size: 12px;
 }
 #clayteam .teams > div a {
   position: absolute;
@@ -544,9 +562,12 @@ section .page-next:hover {
 #clayteam .teams > div a span {
   display: none;
 }
+#clayteam .teams > div a:hover {
+  background: #624FFF;
+}
 #clayteam .teams > div:hover {
   z-index: 1;
-  box-shadow: 0 0 32px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 32px rgba(17, 31, 73, 0.6);
 }
 #clayteam .teams > div:hover img {
   -webkit-filter: none;
@@ -610,9 +631,9 @@ section .page-next:hover {
 }
 #security ul li h5 {
   margin-top: 12px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2.8rem;
-  font-family: "Ubuntu";
+  font-family: "ubuntu";
 }
 #security ul li p {
   margin: 0;
@@ -662,7 +683,7 @@ section .page-next:hover {
   border-radius: 32px;
 }
 #security ul:hover li:hover h5 {
-  font-weight: 600;
+  font-weight: 700;
 }
 #security ul:hover li:hover i {
   color: #624FFF;
@@ -680,7 +701,7 @@ section .page-next:hover {
 }
 
 #partners {
-  background-color: #624FFF;
+  background: #624FFF;
 }
 #partners h2 {
   color: #111F49;
@@ -689,12 +710,12 @@ section .page-next:hover {
   border-bottom-color: rgba(17, 31, 73, 0.4);
 }
 #partners .partners {
-  margin: 0 auto;
-  max-width: 980px;
+  margin: 50px auto;
+  max-width: 880px;
 }
 #partners .partners li {
   display: inline-block;
-  margin: 0 24px 48px;
+  margin: 24px;
   opacity: 0.8;
 }
 #partners .partners li img {
@@ -710,7 +731,7 @@ section .page-next:hover {
   opacity: 1;
 }
 #partners .news {
-  margin: 60px auto;
+  margin: 0 auto;
   width: 60%;
   max-width: 680px;
   padding: 40px;
@@ -721,7 +742,7 @@ section .page-next:hover {
 #partners .news h3 {
   margin: 0 12px 12px;
   color: #111F49;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
 }
 #partners .news li {
@@ -772,7 +793,7 @@ footer {
   overflow: hidden;
 }
 footer h5 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
 }
 footer a {
@@ -791,14 +812,49 @@ footer .copyright {
   border-top: 2px solid rgba(0, 0, 0, 0.05);
 }
 footer .copyright h6 {
-  font-weight: 600;
-  font-family: "Ubuntu";
+  font-weight: 700;
+  font-family: "ubuntu";
 }
 footer .copyright li {
   text-align: right;
 }
 footer .copyright a {
   margin: 0 12px;
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  header .logo h1 img {
+    width: 48px;
+  }
+  header nav button {
+    z-index: 55;
+    position: fixed;
+    right: 12px;
+    top: 12px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+  }
+  header nav ul {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=clay.css.map */
