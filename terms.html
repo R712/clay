@@ -23,9 +23,15 @@
             <img src="imgs/logo-clay.svg" alt="clay">
             <a href="./">클레이 홈페이지 바로가기</a>
             <q>클레이는 프라이빗 키를 비롯한 사용자 정보를 안전하게 암호화하여 기기에 저장하며, 중앙 서버에 이를 보관하지 않아 해킹의 위협이 없습니다.</q>
+            <nav>
+                <ul>
+                    <li><a href="#ko">한국어</a></li>
+                    <li><a href="#en">English</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <% if(locale == 'ko'){ %>
+        <section id="ko">
 
             <h1>클레이 이용약관</h1>
 
@@ -734,7 +740,9 @@
                 <li>이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 알려드리겠습니다.</li>
             </ol>
 
-        <% } else { %>
+        </section>
+            
+        <section id="en">
 
             <h1>Clay Terms of Service</h1>
             <h2>Chapter I General Provisions</h2>
@@ -1448,7 +1456,11 @@
                 <p><strong>Supplementary provisions</strong></p>
                 <p>The terms of service effective date August 31, 2018.</p>
             </footer>
-        <% } %>
+
+        </section>
+        
+        <a href="#">Go to top</a>
+
     </div>
 </body>
 
