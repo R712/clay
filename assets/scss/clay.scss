@@ -846,63 +846,57 @@ footer {
   ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-  //CSS
-  
 }
 
 /* 
   ##Device = Tablets, Ipads (landscape)
   ##Screen = B/w 768px to 1024px
 */
-
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-  //CSS
-  
 }
 
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
-
 @media (min-width: 481px) and (max-width: 767px) {
-  
-  //CSS
-  
+    #clayview,
+    #clayteam {
+        display: none;
+    }
 }
 
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-
 @media (min-width: 320px) and (max-width: 480px) {
-  
-header {
-    .logo {
-        h1 {
-            img {
-                width: 48px;
+    #clayview,
+    #clayteam {
+        display: none;
+    }
+    header {
+        .logo {
+            h1 {
+                img {
+                    width: 48px;
+                }
+            }
+        }
+        nav {
+            button {
+                z-index: 55;
+                position: fixed;
+                right: 12px;
+                top: 12px;
+                display: block;
+                width: 40px;
+                height: 40px;
+                background: #FFF;
+            }
+            ul {
+                display: none;
             }
         }
     }
-    nav {
-        button {
-            z-index: 55;
-            position: fixed;
-            right: 12px;
-            top: 12px;
-            display: block;
-            width: 40px;
-            height: 40px;
-            background: #FFF;
-        }
-        ul {
-            display: none;
-        }
-    }
-}
-  
 }

@@ -834,11 +834,22 @@ footer .copyright a {
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
+@media (min-width: 481px) and (max-width: 767px) {
+  #clayview,
+#clayteam {
+    display: none;
+  }
+}
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 @media (min-width: 320px) and (max-width: 480px) {
+  #clayview,
+#clayteam {
+    display: none;
+  }
+
   header .logo h1 img {
     width: 48px;
   }
