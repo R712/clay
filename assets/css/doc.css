@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #E2E4EC;
+  font-size: 15px;
+  font-family: "Spoqa Han Sans", sans-serif;
+  line-height: 1.85;
+}
+
+.doc {
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 880px;
+  background: #FFF;
+  color: #111F49;
+  box-sizing: border-box;
+}
+.doc header {
+  text-align: center;
+}
+.doc header img {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 18px;
+  width: 49px;
+  background: #624FFF;
+  border-radius: 40px;
+}
+.doc header a {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  color: #624FFF;
+}
+.doc header q {
+  display: block;
+  margin: 10px 50px;
+  padding: 12px 20px;
+  background: #FAFAFC;
+  color: #111F49;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.doc h1 {
+  margin: 30px 0;
+  padding: 5px 10px;
+  border-bottom: 2px solid #111F49;
+}
+.doc h2 {
+  margin: 30px 0 20px;
+  padding: 5px 10px;
+  background: #FAFAFC;
+}
+.doc h3 {
+  margin: 20px 0 10px;
+  padding: 5px 10px;
+}
+.doc table {
+  margin-bottom: 30px;
+  border-collapse: separate;
+  background: #FAFAFC;
+  font-size: 14px;
+}
+.doc table th, .doc table td {
+  padding: 5px;
+  background: #FFF;
+}
+.doc table ul {
+  padding-left: 30px;
+}
+
+/*# sourceMappingURL=doc.css.map */
