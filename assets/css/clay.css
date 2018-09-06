@@ -20,6 +20,7 @@ body {
   background: #F4F5F7;
   color: #111F49;
   font-size: 16px;
+  word-break: keep-all;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: default;
@@ -459,6 +460,7 @@ section .page-next:hover {
   flex-direction: column;
   margin: 0;
   padding: 5%;
+  padding-right: 15%;
   width: 50%;
   height: 30vh;
   background: #624FFF;
@@ -471,19 +473,21 @@ section .page-next:hover {
   display: block;
 }
 #clayview ul li:nth-child(2n) {
+  padding-right: 5%;
+  padding-left: 15%;
   border-left: 2px dashed rgba(255, 255, 255, 0.15);
 }
 #clayview ul li:nth-child(3), #clayview ul li:nth-child(4) {
   border-top: 2px dashed rgba(255, 255, 255, 0.15);
 }
 #clayview ul li h4 {
-  font-size: 2vw;
+  font-size: 32px;
   font-weight: 700;
   font-family: "ubuntu";
   opacity: 0.4;
 }
 #clayview ul li p {
-  font-size: 1vw;
+  font-size: 18px;
   line-height: 1.8;
   width: 15vw;
   opacity: 0.4;
@@ -494,15 +498,15 @@ section .page-next:hover {
   position: absolute;
   right: 50%;
   top: 6vh;
-  margin-right: -11vw;
+  margin-right: -187.5px;
   background: rgba(0, 0, 0, 0.15);
-  border-radius: 2vw;
+  border-radius: 30px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 #clayview ul li .screen img {
   display: block;
-  width: 22vw;
+  width: 375px;
 }
 #clayview ul li.current h4, #clayview ul li.current p {
   opacity: 1;
@@ -526,7 +530,7 @@ section .page-next:hover {
   flex-direction: column;
   float: left;
   padding-bottom: 10px;
-  width: 20%;
+  width: 176px;
   background: #FFF;
   color: #111F49;
   cursor: help;
@@ -746,7 +750,7 @@ section .page-next:hover {
   margin: 0 12px 12px;
   color: #111F49;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 22px;
 }
 #partners .news li {
   margin: 0;
@@ -766,7 +770,7 @@ section .page-next:hover {
   padding: 3px 8px;
   width: 80px;
   background: #F4F5F7;
-  font-size: 1.2rem;
+  font-size: 12px;
   text-align: center;
   border-radius: 3px;
 }

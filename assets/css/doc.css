@@ -14,6 +14,7 @@ body {
   background: #FFF;
   color: #111F49;
   box-sizing: border-box;
+  word-break: keep-all;
 }
 .doc header {
   text-align: center;
