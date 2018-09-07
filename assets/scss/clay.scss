@@ -7,14 +7,14 @@
 	list-style: none;
 }
 html {
-    min-width: 720px;
+    max-width: 100%;
 	height: 100%;
 	font-family: "ubuntu", "Helvetica Neue", "Spoqa Han Sans", Arial, sans-serif;
     font-weight: regular;
 }
 body {
+    max-width: 100%;
 	height: 100%;
-    min-width: 720px;
 	min-height: 100%;
 	background: #F4F5F7;
 	color: #111F49;
@@ -239,6 +239,7 @@ section {
 		margin: 0 auto;
         padding: 50px 5%;
         vertical-align: middle;
+        box-sizing: border-box;
         overflow: hidden;
     }
     /*
@@ -560,6 +561,14 @@ section {
                     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
                     filter: grayscale(100%);
                 }
+                &.hiring {
+                    width: 176px;
+                    height: 176px;
+                    background: #624FFF;
+                    color: #FFF;
+                    font-size: 48px;
+                    line-height: 176px;
+                }
             }
             strong {
                 font-size: 15px;
@@ -757,12 +766,13 @@ section {
     }
     .news {
         margin: 0 auto;
-        width: 60%;
-        max-width: 680px;
+        max-width: 80vw;
+        width: auto;
         padding: 40px;
         background: #FFF;
         text-align: left;
         box-shadow: 0 4px 150px rgba(17,31,73,.6);
+        box-sizing: border-box;
         h3 {
             margin: 0 12px 12px;
             color: #111F49;
@@ -779,6 +789,7 @@ section {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                box-sizing: border-box;
                 span {
                     display: inline-block;
                     margin-right: 6px;
@@ -817,6 +828,7 @@ footer {
     font-size: 14px;
     text-align: left;
     overflow: hidden;
+    box-sizing: border-box;
     h5 {
         font-weight: 700;
         font-size: 2rem;
@@ -840,7 +852,7 @@ footer {
             font-weight: 700;
             font-family: "ubuntu";
         }
-        li {
+        span {
             text-align: right;
         }
         a {
@@ -848,42 +860,31 @@ footer {
         }
     }
 }
-
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-@media (min-width: 481px) and (max-width: 767px) {
-    #clayview,
-    #clayteam {
-        display: none;
+@media (max-width: 1080px) {
+    #clayview ul li {
+        .screen {
+            margin-right: -150px;
+            img {
+                width: 300px;
+            }
+        }
+        h4 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
 }
-
 /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
+  ##Screen => 767px
 */
-@media (min-width: 320px) and (max-width: 480px) {
-    #clayview,
-    #clayteam {
-        display: none;
+@media (max-width: 767px) {
+    .container {
+        padding: 50px 0 !important;
     }
     header {
+        position: absolute;
         .logo {
             h1 {
                 img {
@@ -892,19 +893,84 @@ footer {
             }
         }
         nav {
-            button {
-                z-index: 55;
-                position: fixed;
-                right: 12px;
-                top: 12px;
-                display: block;
-                width: 40px;
-                height: 40px;
-                background: #FFF;
+            display: none;
+        }
+    }
+    section {
+        min-height: 60vh;
+        h2 {
+            margin: 30px auto;
+            width: 80vw;
+            font-size: 24px;
+        }
+    }
+    #hero {
+        .headline {
+            padding: 10px 25px;
+            h2 {
+                font-size: 24px;
             }
-            ul {
-                display: none;
+            p {
+                font-size: 16px;
             }
         }
+    }
+    #world {
+        display: none;
+    }
+    #clayview,
+    #clayteam {
+        display: none;
+    }
+    #partners {
+        .partners {
+            margin: 0 auto;
+            width: 80%;
+            overflow: hidden;
+            li {
+                box-sizing: border-box;
+                margin: 0;
+                width: 30%;
+                text-align: center;
+                a {
+                    display: block;
+                    margin: 15px;
+                    box-sizing: border-box;
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .news {
+            margin: 30px 10vw;
+            padding: 10px;
+            width: 80vw;
+            font-size: 14px;
+            h3 {
+                display: none;
+            }
+            li:nth-child(2) a {
+                border: 0;
+            }
+        }
+    }
+    footer {
+        .container {
+            padding: 0 8% !important;
+        }
+        .copyright {
+            h6, span {
+                text-align: center;
+            }
+        }
+        .column {
+            max-width: 100% !important;
+        }
+    }
+    .btn-float {
+        right: 20px !important;
+        bottom: 20px !important;
     }
 }

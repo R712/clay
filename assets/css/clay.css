@@ -7,15 +7,15 @@
 }
 
 html {
-  min-width: 720px;
+  max-width: 100%;
   height: 100%;
   font-family: "ubuntu", "Helvetica Neue", "Spoqa Han Sans", Arial, sans-serif;
   font-weight: regular;
 }
 
 body {
+  max-width: 100%;
   height: 100%;
-  min-width: 720px;
   min-height: 100%;
   background: #F4F5F7;
   color: #111F49;
@@ -249,6 +249,7 @@ section .container {
   margin: 0 auto;
   padding: 50px 5%;
   vertical-align: middle;
+  box-sizing: border-box;
   overflow: hidden;
 }
 section:after {
@@ -548,6 +549,14 @@ section .page-next:hover {
   /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
+#clayteam .teams > div .thumb.hiring {
+  width: 176px;
+  height: 176px;
+  background: #624FFF;
+  color: #FFF;
+  font-size: 48px;
+  line-height: 176px;
+}
 #clayteam .teams > div strong {
   font-size: 15px;
   font-family: "ubuntu";
@@ -739,12 +748,13 @@ section .page-next:hover {
 }
 #partners .news {
   margin: 0 auto;
-  width: 60%;
-  max-width: 680px;
+  max-width: 80vw;
+  width: auto;
   padding: 40px;
   background: #FFF;
   text-align: left;
   box-shadow: 0 4px 150px rgba(17, 31, 73, 0.6);
+  box-sizing: border-box;
 }
 #partners .news h3 {
   margin: 0 12px 12px;
@@ -763,6 +773,7 @@ section .page-next:hover {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 #partners .news li a span {
   display: inline-block;
@@ -798,6 +809,7 @@ footer {
   font-size: 14px;
   text-align: left;
   overflow: hidden;
+  box-sizing: border-box;
 }
 footer h5 {
   font-weight: 700;
@@ -822,56 +834,119 @@ footer .copyright h6 {
   font-weight: 700;
   font-family: "ubuntu";
 }
-footer .copyright li {
+footer .copyright span {
   text-align: right;
 }
 footer .copyright a {
   margin: 0 12px;
 }
 
-/* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-@media (min-width: 481px) and (max-width: 767px) {
-  #clayview,
-#clayteam {
-    display: none;
+@media (max-width: 1080px) {
+  #clayview ul li .screen {
+    margin-right: -150px;
+  }
+  #clayview ul li .screen img {
+    width: 300px;
+  }
+  #clayview ul li h4 {
+    font-size: 24px;
+  }
+  #clayview ul li p {
+    font-size: 16px;
   }
 }
 /* 
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
+  ##Screen => 767px
 */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 767px) {
+  .container {
+    padding: 50px 0 !important;
+  }
+
+  header {
+    position: absolute;
+  }
+  header .logo h1 img {
+    width: 48px;
+  }
+  header nav {
+    display: none;
+  }
+
+  section {
+    min-height: 60vh;
+  }
+  section h2 {
+    margin: 30px auto;
+    width: 80vw;
+    font-size: 24px;
+  }
+
+  #hero .headline {
+    padding: 10px 25px;
+  }
+  #hero .headline h2 {
+    font-size: 24px;
+  }
+  #hero .headline p {
+    font-size: 16px;
+  }
+
+  #world {
+    display: none;
+  }
+
   #clayview,
 #clayteam {
     display: none;
   }
 
-  header .logo h1 img {
-    width: 48px;
+  #partners .partners {
+    margin: 0 auto;
+    width: 80%;
+    overflow: hidden;
   }
-  header nav button {
-    z-index: 55;
-    position: fixed;
-    right: 12px;
-    top: 12px;
+  #partners .partners li {
+    box-sizing: border-box;
+    margin: 0;
+    width: 30%;
+    text-align: center;
+  }
+  #partners .partners li a {
     display: block;
-    width: 40px;
-    height: 40px;
-    background: #FFF;
+    margin: 15px;
+    box-sizing: border-box;
   }
-  header nav ul {
+  #partners .partners li a img {
+    display: block;
+    width: 100%;
+  }
+  #partners .news {
+    margin: 30px 10vw;
+    padding: 10px;
+    width: 80vw;
+    font-size: 14px;
+  }
+  #partners .news h3 {
     display: none;
+  }
+  #partners .news li:nth-child(2) a {
+    border: 0;
+  }
+
+  footer .container {
+    padding: 0 8% !important;
+  }
+  footer .copyright h6, footer .copyright span {
+    text-align: center;
+  }
+  footer .column {
+    max-width: 100% !important;
+  }
+
+  .btn-float {
+    right: 20px !important;
+    bottom: 20px !important;
   }
 }
 
