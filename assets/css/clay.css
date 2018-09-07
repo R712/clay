@@ -312,6 +312,7 @@ section .page-next:hover {
   margin-bottom: 16px;
   font-size: 36px;
   letter-spacing: -0.5px;
+  line-height: 1.8;
 }
 #hero .headline p {
   font-size: 20px;
@@ -327,7 +328,7 @@ section .page-next:hover {
   position: relative;
   display: inline-block;
   margin: 16px 8px 0;
-  padding: 0 24px;
+  width: 180px;
   background: #FFF;
   color: #111F49;
   font-family: "ubuntu";
@@ -874,7 +875,7 @@ footer .copyright a {
   }
 
   section {
-    min-height: 60vh;
+    min-height: 100vh;
   }
   section h2 {
     margin: 30px auto;
@@ -886,10 +887,11 @@ footer .copyright a {
     padding: 10px 25px;
   }
   #hero .headline h2 {
-    font-size: 24px;
+    font-size: 18px;
+    letter-spacing: 0;
   }
   #hero .headline p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #world {

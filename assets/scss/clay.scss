@@ -316,6 +316,7 @@ section {
             margin-bottom: 16px;
             font-size: 36px;
             letter-spacing: -0.5px;
+            line-height: 1.8;
         }
         p {
             font-size: 20px;
@@ -332,7 +333,7 @@ section {
                 position: relative;
                 display: inline-block;
                 margin: 16px 8px 0;
-                padding: 0 24px;
+                width: 180px;
                 background: #FFF;
                 color: #111F49;
                 font-family: 'ubuntu';
@@ -897,7 +898,7 @@ footer {
         }
     }
     section {
-        min-height: 60vh;
+        min-height: 100vh;
         h2 {
             margin: 30px auto;
             width: 80vw;
@@ -908,10 +909,11 @@ footer {
         .headline {
             padding: 10px 25px;
             h2 {
-                font-size: 24px;
+                font-size: 18px;
+                letter-spacing: 0;
             }
             p {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
     }
