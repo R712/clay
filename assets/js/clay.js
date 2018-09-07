@@ -18,4 +18,16 @@ $(document).ready(function ($) {
         $('[data-clayview-label]').removeClass('current').find('.screen').fadeOut(); 
         $(this).addClass('current').find('.screen').fadeIn();
     });
+    /* ========================================== 
+    scrollTop() >= 300
+    Should be equal the the height of the header
+    ========================================== */
+});
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 300) {
+        $('header').addClass('fixed');
+    }
+    else {
+        $('header').removeClass('fixed');
+    }
 });

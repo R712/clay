@@ -116,7 +116,7 @@ body .btn-float:hover .fab {
 
 header {
   z-index: 999;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   padding: 24px 32px !important;
@@ -206,6 +206,12 @@ header nav li.is-current a {
 header nav li.is-current a:after {
   width: 100%;
 }
+header.fixed {
+  position: fixed;
+  padding: 16px 24px !important;
+  background: rgba(17, 31, 73, 0.85);
+  box-shadow: 0 0 40px rgba(17, 31, 73, 0.4);
+}
 
 section {
   position: relative;
@@ -247,7 +253,7 @@ section .container {
   position: relative;
   display: table-cell;
   margin: 0 auto;
-  padding: 50px 5%;
+  padding: 50px 5% 120px;
   vertical-align: middle;
   box-sizing: border-box;
   overflow: hidden;
@@ -298,24 +304,28 @@ section .page-next:hover {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: 0 auto;
+  max-width: 720px;
   color: #FFF;
+  word-break: keep-all;
 }
 #hero .headline img {
   display: display-block;
-  margin: 0 auto 4vw;
-  width: 10vh;
-  height: 10vh;
-  border-radius: 2.5vh;
+  margin: 0 auto 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 30px;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.25);
 }
 #hero .headline h2 {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-size: 36px;
   letter-spacing: -0.5px;
   line-height: 1.8;
 }
 #hero .headline p {
-  font-size: 20px;
+  margin: 0 auto;
+  font-size: 24px;
   line-height: 1.8;
 }
 #hero .headline p a {
@@ -327,7 +337,7 @@ section .page-next:hover {
 #hero .headline .btns a {
   position: relative;
   display: inline-block;
-  margin: 16px 8px 0;
+  margin: 36px 8px 0;
   width: 180px;
   background: #FFF;
   color: #111F49;
@@ -378,69 +388,6 @@ section .page-next:hover {
 #hero .headline .btns:hover a:hover {
   opacity: 1;
   box-shadow: 0 1px 48px rgba(255, 255, 255, 0.5);
-}
-#hero .screens {
-  display: inline-block;
-}
-#hero .screens .screen {
-  display: inline-block;
-  position: relative;
-}
-#hero .screens .screen img {
-  position: relative;
-  display: inline-block;
-  height: 50vh;
-  border-radius: 40px;
-  box-shadow: 0 4px 150px rgba(17, 31, 73, 0.6);
-}
-#hero .screens:after {
-  content: "";
-  z-index: 5;
-  position: absolute;
-  right: 1vh;
-  bottom: 25vh;
-  width: 128px;
-  height: 128px;
-  background: url("../../imgs/appicon_default.png") no-repeat;
-  background-size: 128px;
-  border-radius: 28px;
-  box-shadow: 0 4px 40px rgba(17, 31, 73, 0.4);
-}
-#hero .screens span {
-  z-index: 5;
-  position: absolute;
-  left: 50%;
-  top: 130px;
-  margin-left: -360px;
-  padding: 0 2rem;
-  background: #624FFF;
-  color: #FFF;
-  font-size: 1.8rem;
-  line-height: 6rem;
-  box-shadow: 0 4px 40px rgba(17, 31, 73, 0.4);
-}
-#hero .screens span:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -24px;
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  border-color: transparent #624FFF #624FFF transparent;
-}
-#hero .screens span:last-child {
-  left: inherit;
-  right: 50%;
-  top: 440px;
-  margin-left: 0;
-  margin-right: -370px;
-  background: #111F49;
-}
-#hero .screens span:last-child:after {
-  right: inherit;
-  left: 0;
-  border-color: transparent transparent #111F49 #111F49;
 }
 #hero:after {
   background-image: url(../../imgs/bg_1.png);
@@ -525,12 +472,15 @@ section .page-next:hover {
   margin: 5vh auto 0;
   max-width: 880px;
   justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 #clayteam .teams > div {
   position: relative;
   display: flex;
   flex-direction: column;
-  float: left;
   padding-bottom: 10px;
   width: 176px;
   background: #FFF;
@@ -842,7 +792,29 @@ footer .copyright a {
   margin: 0 12px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1280px) {
+  #hero .headline {
+    padding: 10px 25px;
+  }
+  #hero .headline img {
+    margin: 50px auto 20px !important;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+  }
+  #hero .headline h2 {
+    margin: 0 auto 10px;
+    font-size: 3vw;
+    letter-spacing: 0;
+  }
+  #hero .headline p {
+    max-width: 85vw;
+    font-size: 2vw;
+  }
+  #hero .headline .btns a {
+    margin-top: 20px;
+  }
+
   #clayview ul li .screen {
     margin-right: -150px;
   }
@@ -854,6 +826,21 @@ footer .copyright a {
   }
   #clayview ul li p {
     font-size: 16px;
+  }
+
+  footer .container {
+    padding: 0 8% !important;
+  }
+  footer .copyright h6, footer .copyright span {
+    text-align: center;
+  }
+  footer .column {
+    max-width: 100% !important;
+  }
+
+  .btn-float {
+    right: 20px !important;
+    bottom: 20px !important;
   }
 }
 /* 
@@ -883,15 +870,12 @@ footer .copyright a {
     font-size: 24px;
   }
 
-  #hero .headline {
-    padding: 10px 25px;
-  }
   #hero .headline h2 {
-    font-size: 18px;
-    letter-spacing: 0;
+    font-size: 4.8vw;
   }
   #hero .headline p {
-    font-size: 14px;
+    max-width: 80vw;
+    font-size: 2.8vw;
   }
 
   #world {
@@ -934,21 +918,6 @@ footer .copyright a {
   }
   #partners .news li:nth-child(2) a {
     border: 0;
-  }
-
-  footer .container {
-    padding: 0 8% !important;
-  }
-  footer .copyright h6, footer .copyright span {
-    text-align: center;
-  }
-  footer .column {
-    max-width: 100% !important;
-  }
-
-  .btn-float {
-    right: 20px !important;
-    bottom: 20px !important;
   }
 }
 

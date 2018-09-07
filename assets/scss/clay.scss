@@ -116,7 +116,7 @@ body {
 
 header {
 	z-index: 999;
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
     padding: 24px 32px !important;
@@ -211,6 +211,12 @@ header {
             }
         }
     }
+    &.fixed {
+        position: fixed;
+        padding: 16px 24px !important;
+        background: rgba(17,31,73,.85);
+        box-shadow: 0 0 40px rgba(17,31,73,.4);
+    }
 }
 
 section {
@@ -237,7 +243,7 @@ section {
 		position: relative;
         display: table-cell;
 		margin: 0 auto;
-        padding: 50px 5%;
+        padding: 50px 5% 120px;
         vertical-align: middle;
         box-sizing: border-box;
         overflow: hidden;
@@ -303,23 +309,27 @@ section {
         display: flex;
         flex-direction: column;
         position: relative;
+        margin: 0 auto;
+        max-width: 720px;
         color: #FFF;
+        word-break: keep-all;
         img {
             display: display-block;
-            margin: 0 auto 4vw;
-            width: 10vh;
-            height: 10vh;
-            border-radius: 2.5vh;
+            margin: 0 auto 30px;
+            width: 120px;
+            height: 120px;
+            border-radius: 30px;
             box-shadow: 0 0 32px rgba(0,0,0,.25);
         }
         h2 {
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             font-size: 36px;
             letter-spacing: -0.5px;
             line-height: 1.8;
         }
         p {
-            font-size: 20px;
+            margin: 0 auto;
+            font-size: 24px;
             line-height: 1.8;
             a {
                 color: rgba(255,255,255,.6);
@@ -332,7 +342,7 @@ section {
             a {
                 position: relative;
                 display: inline-block;
-                margin: 16px 8px 0;
+                margin: 36px 8px 0;
                 width: 180px;
                 background: #FFF;
                 color: #111F49;
@@ -385,70 +395,6 @@ section {
                         opacity: 1;
                         box-shadow: 0 1px 48px rgba(255, 255, 255, 0.5);
                     }
-                }
-            }
-        }
-    }
-    // 구 디자인용 스크린 스타일
-    .screens {
-        display: inline-block;
-        .screen {
-            display: inline-block;
-            position: relative;
-            img {
-                position: relative;
-                display: inline-block;
-                height: 50vh;
-                border-radius: 40px;
-                box-shadow: 0 4px 150px rgba(17,31,73,.6);
-            }
-        }
-        &:after {
-            content: "";
-            z-index: 5;
-            position: absolute;
-            right: 1vh;
-            bottom: 25vh;
-            width: 128px;
-            height: 128px;
-            background: url("../../imgs/appicon_default.png") no-repeat;
-            background-size: 128px;
-            border-radius: 28px;
-            box-shadow: 0 4px 40px rgba(17,31,73,.4);
-        }
-        span {
-            z-index: 5;
-            position: absolute;
-            left: 50%;
-            top: 130px;
-            margin-left: -360px;
-            padding: 0 2rem;
-            background: #624FFF;
-            color: #FFF;
-            font-size: 1.8rem;
-            line-height: 6rem;
-            box-shadow: 0 4px 40px rgba(17,31,73,.4);
-            &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: -24px;
-                width: 0;
-                height: 0;
-                border: 12px solid transparent;
-                border-color: transparent #624FFF #624FFF transparent;
-            }
-            &:last-child {
-                left: inherit;
-                right: 50%;
-                top: 440px;
-                margin-left: 0;
-                margin-right: -370px;
-                background: #111F49;
-                &:after {
-                    right: inherit;
-                    left: 0;
-                    border-color: transparent transparent #111F49 #111F49;
                 }
             }
         }
@@ -541,11 +487,14 @@ section {
         margin: 5vh auto 0;
         max-width: 880px;
         justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
         > div {
             position: relative;
             display: flex;
             flex-direction: column;
-            float: left;
             padding-bottom: 10px;
             width: 176px;
             background: #FFF;
@@ -861,7 +810,33 @@ footer {
         }
     }
 }
-@media (max-width: 1080px) {
+
+@media (max-width: 1280px) {
+    #hero {
+        .headline {
+            padding: 10px 25px;
+            img {
+                margin: 50px auto 20px !important;
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+            h2 {
+                margin: 0 auto 10px;
+                font-size: 3vw;
+                letter-spacing: 0;
+            }
+            p {
+                max-width: 85vw;
+                font-size: 2vw;
+            }
+            .btns {
+                a {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
     #clayview ul li {
         .screen {
             margin-right: -150px;
@@ -875,6 +850,23 @@ footer {
         p {
             font-size: 16px;
         }
+    }
+    footer {
+        .container {
+            padding: 0 8% !important;
+        }
+        .copyright {
+            h6, span {
+                text-align: center;
+            }
+        }
+        .column {
+            max-width: 100% !important;
+        }
+    }
+    .btn-float {
+        right: 20px !important;
+        bottom: 20px !important;
     }
 }
 /* 
@@ -907,13 +899,12 @@ footer {
     }
     #hero {
         .headline {
-            padding: 10px 25px;
             h2 {
-                font-size: 18px;
-                letter-spacing: 0;
+                font-size: 4.8vw;
             }
             p {
-                font-size: 14px;
+                max-width: 80vw;
+                font-size: 2.8vw;
             }
         }
     }
@@ -957,22 +948,5 @@ footer {
                 border: 0;
             }
         }
-    }
-    footer {
-        .container {
-            padding: 0 8% !important;
-        }
-        .copyright {
-            h6, span {
-                text-align: center;
-            }
-        }
-        .column {
-            max-width: 100% !important;
-        }
-    }
-    .btn-float {
-        right: 20px !important;
-        bottom: 20px !important;
     }
 }
