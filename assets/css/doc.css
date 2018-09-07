@@ -35,8 +35,9 @@ body {
 }
 .doc header q {
   display: block;
-  margin: 10px 50px;
+  margin: 10px auto;
   padding: 12px 20px;
+  max-width: 400px;
   background: #FAFAFC;
   color: #111F49;
   font-size: 18px;
@@ -94,6 +95,15 @@ body {
   font-weight: bold;
   font-size: 11px;
   text-decoration: none;
+}
+
+/* 
+  ##Screen => 767px
+*/
+@media (max-width: 767px) {
+  .doc {
+    padding: 40px 30px;
+  }
 }
 
 /*# sourceMappingURL=doc.css.map */
