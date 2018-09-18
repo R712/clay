@@ -688,22 +688,50 @@ section {
         }
     }
     .partners {
-        margin: 50px auto;
+        margin: 50px auto 80px;
         max-width: 880px;
         li {
+            position: relative;
             display: inline-block;
-            margin: 24px;
+            margin: 0 24px;
             opacity: .8;
-            img {
-                max-width: 140px;
-                max-height: 40px;
+            max-width: 140px;
+            height: 88px;
+            line-height: 88px;
+            vertical-align: middle;
+            a {
+                display: inline-block;
                 vertical-align: middle;
+            }
+            img {
+                width: 100%;
                 cursor: pointer;
+                vertical-align: middle;
+            }
+            span {
+                z-index: 50;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: none;
+                min-height: 100%;
+                padding: 10px 12px;
+                background: rgba(0,0,0,.85);
+                font-size: 14px;
+                line-height: 24px;
+                u {
+                    color: #624FFF;
+                }
+            }
+            &:hover {
+                span {
+                    display: block;
+                }
             }
         }
         &:hover {
             li {
-                opacity: .4;
+                opacity: .25;
                 &:hover {
                     opacity: 1;
                 }

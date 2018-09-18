@@ -346,17 +346,13 @@ section .page-next:hover {
   font-size: 16px;
   line-height: 54px;
   border-radius: 27px;
-  opacity: 0.6;
+  opacity: 1;
 }
 #hero .headline .btns a .fab {
   margin: 0 16px 1px 0;
   color: #111F49;
   font-size: 18px;
   opacity: 0.4;
-}
-#hero .headline .btns a:first-child {
-  opacity: 1;
-  box-shadow: 0 1px 48px rgba(255, 255, 255, 0.5);
 }
 #hero .headline .btns a:hover {
   text-decoration: none;
@@ -677,22 +673,48 @@ section .page-next:hover {
   border-bottom-color: rgba(17, 31, 73, 0.4);
 }
 #partners .partners {
-  margin: 50px auto;
+  margin: 50px auto 80px;
   max-width: 880px;
 }
 #partners .partners li {
+  position: relative;
   display: inline-block;
-  margin: 24px;
+  margin: 0 24px;
   opacity: 0.8;
+  max-width: 140px;
+  height: 88px;
+  line-height: 88px;
+  vertical-align: middle;
+}
+#partners .partners li a {
+  display: inline-block;
+  vertical-align: middle;
 }
 #partners .partners li img {
-  max-width: 140px;
-  max-height: 40px;
-  vertical-align: middle;
+  width: 100%;
   cursor: pointer;
+  vertical-align: middle;
+}
+#partners .partners li span {
+  z-index: 50;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  min-height: 100%;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 24px;
+}
+#partners .partners li span u {
+  color: #624FFF;
+}
+#partners .partners li:hover span {
+  display: block;
 }
 #partners .partners:hover li {
-  opacity: 0.4;
+  opacity: 0.25;
 }
 #partners .partners:hover li:hover {
   opacity: 1;
