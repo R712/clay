@@ -746,7 +746,6 @@ section {
                 z-index: 50;
                 position: absolute;
                 left: 0;
-                top: 0;
                 display: none;
                 min-height: 100%;
                 padding: 10px 12px;
@@ -760,6 +759,7 @@ section {
             &:hover {
                 span {
                     display: block;
+                    color: #FFF;
                 }
             }
         }

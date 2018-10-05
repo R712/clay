@@ -610,7 +610,6 @@ section {
         z-index: 50;
         position: absolute;
         left: 0;
-        top: 0;
         display: none;
         min-height: 100%;
         padding: 10px 12px;
@@ -620,7 +619,8 @@ section {
         #partners .partners li span u {
           color: #624FFF; }
       #partners .partners li:hover span {
-        display: block; }
+        display: block;
+        color: #FFF; }
     #partners .partners:hover li {
       opacity: .25; }
       #partners .partners:hover li:hover {
