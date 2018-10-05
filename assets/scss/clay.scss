@@ -127,7 +127,7 @@ header {
         float: left;
         h1 {
             float: left;
-            margin: 0 16px 0 0;
+            margin: 4px 16px 0 0;
             font-size: 16px;
             line-height: 32px;
             img {
@@ -176,7 +176,7 @@ header {
             a {
                 display: block;
                 padding: 6px 12px;
-                color: rgba(255,255,255,.4);
+                color: rgba(255,255,255,.6);
                 &:hover {
                     color: #FFF;
                 }

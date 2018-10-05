@@ -110,7 +110,7 @@ header {
     float: left; }
     header .logo h1 {
       float: left;
-      margin: 0 16px 0 0;
+      margin: 4px 16px 0 0;
       font-size: 16px;
       line-height: 32px; }
       header .logo h1 img {
@@ -151,7 +151,7 @@ header {
       header .lang-list ul a {
         display: block;
         padding: 6px 12px;
-        color: rgba(255, 255, 255, 0.4); }
+        color: rgba(255, 255, 255, 0.6); }
         header .lang-list ul a:hover {
           color: #FFF; }
   header nav {
