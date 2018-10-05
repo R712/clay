@@ -3,9 +3,8 @@ body {
   padding: 0;
   background: #E2E4EC;
   font-size: 15px;
-  font-family: "Spoqa Han Sans", sans-serif;
-  line-height: 1.85;
-}
+  font-family: 'Spoqa Han Sans', sans-serif;
+  line-height: 1.85; }
 
 .doc {
   margin: 0 auto;
@@ -14,99 +13,84 @@ body {
   background: #FFF;
   color: #111F49;
   box-sizing: border-box;
-  word-break: keep-all;
-}
-.doc header {
-  text-align: center;
-}
-.doc header img {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 18px;
-  width: 49px;
-  background: #624FFF;
-  border-radius: 40px;
-}
-.doc header a {
-  display: inline-block;
-  margin: 10px;
-  padding: 5px;
-  color: #624FFF;
-}
-.doc header q {
-  display: block;
-  margin: 10px auto;
-  padding: 12px 20px;
-  max-width: 400px;
-  background: #FAFAFC;
-  color: #111F49;
-  font-size: 18px;
-  border-radius: 10px;
-}
-.doc header nav {
-  overflow: hidden;
-}
-.doc header nav ul {
-  display: flex;
-}
-.doc header nav ul li {
-  margin: 10px;
-  width: 50%;
-  list-style: none;
-}
-.doc header nav ul li a {
-  font-weight: bold;
-  font-size: 18px;
-}
-.doc h1 {
-  margin: 30px 0;
-  padding: 5px 10px;
-  border-bottom: 2px solid #111F49;
-}
-.doc h2 {
-  margin: 30px 0 20px;
-  padding: 5px 10px;
-  background: #FAFAFC;
-}
-.doc h3 {
-  margin: 20px 0 10px;
-  padding: 5px 10px;
-}
-.doc .table-wrap {
-  overflow: auto;
-  margin: 15px 0 30px;
-}
-.doc table {
-  border-collapse: separate;
-  background: #FAFAFC;
-  font-size: 14px;
-}
-.doc table th, .doc table td {
-  padding: 5px;
-  background: #FFF;
-}
-.doc table ul {
-  padding-left: 30px;
-}
-.doc > a {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  padding: 10px 20px;
-  background: #FFF;
-  color: #ACB1C0;
-  font-weight: bold;
-  font-size: 11px;
-  text-decoration: none;
-}
+  word-break: keep-all; }
+  .doc header {
+    text-align: center; }
+    .doc header img {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 18px;
+      width: 49px;
+      background: #624FFF;
+      border-radius: 40px; }
+    .doc header a {
+      display: inline-block;
+      margin: 10px;
+      padding: 5px;
+      color: #624FFF; }
+    .doc header q {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 20px;
+      max-width: 400px;
+      background: #FAFAFC;
+      color: #111F49;
+      font-size: 18px;
+      border-radius: 10px; }
+    .doc header nav {
+      overflow: hidden; }
+      .doc header nav ul {
+        display: flex;
+        padding: 0; }
+        .doc header nav ul li {
+          margin: 10px;
+          width: 50%;
+          list-style: none; }
+          .doc header nav ul li a {
+            display: block;
+            font-weight: bold;
+            font-size: 18px; }
+            .doc header nav ul li a:hover {
+              background: #FAFAFC; }
+  .doc h1 {
+    margin: 30px 0;
+    padding: 5px 10px;
+    border-bottom: 2px solid #111F49; }
+  .doc h2 {
+    margin: 30px 0 20px;
+    padding: 5px 10px;
+    background: #FAFAFC; }
+  .doc h3 {
+    margin: 20px 0 10px;
+    padding: 5px 10px; }
+  .doc .table-wrap {
+    overflow: auto;
+    margin: 15px 0 30px; }
+  .doc table {
+    border-collapse: separate;
+    background: #FAFAFC;
+    font-size: 14px; }
+    .doc table th, .doc table td {
+      padding: 5px;
+      background: #FFF; }
+    .doc table ul {
+      padding-left: 30px; }
+  .doc > a {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 10px 20px;
+    background: #FFF;
+    color: #ACB1C0;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none; }
 
 /* 
   ##Screen => 767px
 */
 @media (max-width: 767px) {
   .doc {
-    padding: 40px 30px;
-  }
-}
+    padding: 40px 30px; } }
 
 /*# sourceMappingURL=doc.css.map */
