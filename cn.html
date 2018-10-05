@@ -28,8 +28,17 @@
             <h1 class="wow animated fadeIn">
                 <img src="imgs/logo-clay.svg" alt="Clay">
             </h1>
-            <a href="index.html" class="wow animated fadeIn">KR</a>
-            <a href="en.html" class="wow animated fadeIn"><strong>EN</strong></a>
+            <div class="lang-list">
+                <div class="lang-selected">
+                    <i class="fas fa-globe"></i>
+                    <span>繁體中文</span>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="wow animated fadeIn">한국어</a></li>
+                    <li><a href="en.html" class="wow animated fadeIn">English</a></li>
+                    <li><a href="cn.html" class="wow animated fadeIn">繁體中文</a></li>
+                </ul>
+            </div>
         </div>
         <nav>
             <ul class="wow animated fadeIn">
@@ -45,12 +54,25 @@
         <canvas id="world"></canvas>
         <div class="container">
             <div class="headline wow animated fadeIn">
-                <img src="imgs/appicon_default.png" alt="Clay app icon" />
-                <h2 class="wow animated fadeIn" data-wow-delay="0.5s">Everything you can <strong>play around with Cryptocurrency.</strong></h2>
-                <p class="wow animated fadeIn" data-wow-delay="0.8s">Inconvenient crypto-asset management with scattered exchanges and wallets- <strong>Lets make it simple with Clay </strong>- all exchanges and wallets in one. <a href="#security" class="scroll">more</a></p>
-                <div class="btns wow animated flipInX" data-wow-delay="1s">
-                    <a href="https://play.google.com/store/apps/details?id=one.clay" title="Meet on google play." target="_blank"><i class="fab fa-google"></i>Google Play</a>
-                    <a href="https://itunes.apple.com/kr/app/clay-blockchain-multi-wallet/id1435445703" title="Meet on Appstore." target="_blank"><i class="fab fa-apple"></i>App Store</a>
+                <img src="imgs/appicon_default.png" class="logo" alt="Clay app icon" />
+                <h2 class="wow animated fadeIn" data-wow-delay="0.5s">下载iOS版火币钱包<strong>关于我们</strong></h2>
+                <p class="wow animated fadeIn" data-wow-delay="0.8s">在手机的 设置 - 通用- 设备管理 中找到火币钱包证书 <strong>第一次打开“火币钱包”的时候会弹出以上框</strong> <a href="#clayview" class="scroll">更多的观点</a></p>
+                <div class="tab-downloads">
+                    <ul class="tabs">
+                        <li class="tab-qrcode is-current">企业版安装包下载</li>
+                        <li class="tab-appstore">App Store下载</li>
+                    </ul>
+                    <div class="tab-qrcode tab-content">
+                        <img src="./imgs/cn_qr.png" alt="download QRcode">
+                        <p>手机用户请扫描二维码安装企业发布版本</p>
+                    </div>
+                    <div class="tab-appstore tab-content">
+                        <div class="btns">
+                            <a href="https://play.google.com/store/apps/details?id=one.clay" title="Meet on google play." target="_blank"><i class="fab fa-google"></i>Google Play</a>
+                            <a href="https://itunes.apple.com/kr/app/clay-blockchain-multi-wallet/id1435445703" title="Meet on Appstore." target="_blank"><i class="fab fa-apple"></i>App Store</a>
+                        </div>
+                        <p>即将发布，敬请期待</p>
+                    </div>
                 </div>
             </div>
         </div>
