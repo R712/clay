@@ -1,4 +1,4 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="-70 0 70 120">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="120" viewbox="-70 0 70 120">
 <style>
 /* for animation */
 @keyframes shake {
@@ -21,37 +21,80 @@
     }
 }
 @keyframes scaleDown {
+    to {
+        transform: scale(.8);
+    }
+}
+@keyframes rotateStar {
     0% {
-        transform: scaleY(1);
+        transform: scale(1) rotateZ(0);
+    }
+    50% {
+        transform: scale(.5) rotateZ(180deg);
     }
     100% {
-        transform: scaleY(.95);
+        transform: scale(1) rotateZ(360deg);
+    }
+}
+@keyframes openHead {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(45deg);
     }
 }
 #giftbox_head {
     transform: translate3d(0, 0, 0);
+    transform-origin: center;
     -webkit-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
-    -moz-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
-    -ms-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
-    -o-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
-    animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
+    -moz-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite both;
+    -ms-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite both;
+    -o-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite both;
+    animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite both;
 }
 #giftbox {
+    position: relative;
     cursor: pointer;
     transform: translate3d(0,0,0);
+    transform-origin: center;
 }
 #giftbox:hover {
-    animation: shake .5s cubic-bezier(.4,.1,.2,1) infinite both,
-    fadeOut .5s ease-out infinite both;
+    animation: shake .5s cubic-bezier(.4,.1,.2,1) infinite both;
+}
+#giftbox:active {
+    animation: scaleDown .5s cubic-bezier(.4,.1,.2,1) both;
 }
 #giftbox:hover #giftbox_head {
     animation: none;
 }
+#giftbox:active #giftbox_head {
+    animation: openHead .5s cubic-bezier(.4,.1,.2,1) both;
+}
 #giftbox:hover .ribbon {
-    animation: fadeOut 1s ease-out both;
+    animation: fadeOut 1s ease-out infinite both;
+}
+#giftbox .star {
+    opacity: 0;
+    animation: rotateStar 1s 1s cubic-bezier(.4,.1,.2,1) infinite both,
+    fanfare 1s 1.5s cubic-bezier(.4,.1,.2,1) infinite both;
+    transform-origin: center;
+}
+#giftbox .star:first-child {
+    animation: rotateStar 1s 1.25s cubic-bezier(.4,.1,.2,1) infinite both,
+    fanfare 1s 1.5s cubic-bezier(.4,.1,.2,1) both;
+}
+#giftbox .star:last-child {
+    animation: rotateStar 1s 1.5s cubic-bezier(.4,.1,.2,1) infinite both,
+    fanfare 1s 1.5s cubic-bezier(.4,.1,.2,1) both;
 }
 </style>
 <g id="giftbox" cx="0" cy="0">
+    <g id="giftbox_body">
+        <path class="box" d="M18 48H122V116C122 117.105 121.105 118 120 118H20C18.8954 118 18 117.105 18 116V48Z" fill="white" stroke="#323643" stroke-width="4"/>
+        <rect class="ribbon" x="57" y="48" width="26" height="70" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
+        <path class="shadow" opacity="0.1" d="M16 46H124V56C124 58.2091 122.209 60 120 60H20C17.7909 60 16 58.2091 16 56V46Z" fill="#323643"/>
+    </g>
     <g id="giftbox_head">
         <rect class="box" x="12" y="22" width="116" height="26" rx="2" fill="white" stroke="#323643" stroke-width="4"/>
         <rect class="ribbon" x="54" y="22" width="32" height="26" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
@@ -63,10 +106,11 @@
             <path class="ribbon" d="M68 10H72C76.4183 10 80 13.5817 80 18V22H60V18C60 13.5817 63.5817 10 68 10Z" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
         </g>
     </g>
-    <g id="giftbox_body">
-        <path class="box" d="M18 48H122V116C122 117.105 121.105 118 120 118H20C18.8954 118 18 117.105 18 116V48Z" fill="white" stroke="#323643" stroke-width="4"/>
-        <rect class="ribbon" x="57" y="48" width="26" height="70" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
-        <path class="shadow" opacity="0.1" d="M16 46H124V56C124 58.2091 122.209 60 120 60H20C17.7909 60 16 58.2091 16 56V46Z" fill="#323643"/>
+    <g id="stars">    
+        <path class="star" d="M70 41L75.1317 54.8683L89 60L75.1317 65.1317L70 79L64.8683 65.1317L51 60L64.8683 54.8683L70 41Z" fill="#FECA2F"/>
+        <path class="star" d="M70 41L75.1317 54.8683L89 60L75.1317 65.1317L70 79L64.8683 65.1317L51 60L64.8683 54.8683L70 41Z" fill="#6FCF97"/>
+        <path class="star" d="M70 41L75.1317 54.8683L89 60L75.1317 65.1317L70 79L64.8683 65.1317L51 60L64.8683 54.8683L70 41Z" fill="#44CEF5"/>
     </g>
+
 </g>
 </svg>
