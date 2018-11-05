@@ -1,0 +1,72 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="-70 0 70 120">
+<style>
+/* for animation */
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+        transform: translate3d(-3px, 0, 0);
+    }
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: .5;
+    }
+}
+@keyframes scaleDown {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(.95);
+    }
+}
+#giftbox_head {
+    transform: translate3d(0, 0, 0);
+    -webkit-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
+    -moz-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
+    -ms-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
+    -o-animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
+    animation: shake 1.5s 1s cubic-bezier(.4,.1,.2,1) infinite alternate-reverse both;
+}
+#giftbox {
+    cursor: pointer;
+    transform: translate3d(0,0,0);
+}
+#giftbox:hover {
+    animation: shake .5s cubic-bezier(.4,.1,.2,1) infinite both,
+    fadeOut .5s ease-out infinite both;
+}
+#giftbox:hover #giftbox_head {
+    animation: none;
+}
+#giftbox:hover .ribbon {
+    animation: fadeOut 1s ease-out both;
+}
+</style>
+<g id="giftbox" cx="0" cy="0">
+    <g id="giftbox_head">
+        <rect class="box" x="12" y="22" width="116" height="26" rx="2" fill="white" stroke="#323643" stroke-width="4"/>
+        <rect class="ribbon" x="54" y="22" width="32" height="26" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
+        <g id="ribbon">
+            <path class="ribbon" d="M78.2374 12.2591L94.5581 5.73084L97.5543 19.2141L79.6676 20.8402L78.2374 12.2591Z" fill="#B8A9FF" stroke="#323643" stroke-width="4" stroke-linejoin="round"/>
+            <path class="ribbon" d="M61.7626 12.2591L45.4419 5.73084L42.4457 19.2141L60.3324 20.8402L61.7626 12.2591Z" fill="#B8A9FF" stroke="#323643" stroke-width="4" stroke-linejoin="round"/>
+            <path class="ribbon" d="M34 12.2844L60 15.751L60 22H34V12.2844Z" fill="#B8A9FF" stroke="#323643" stroke-width="4" stroke-linejoin="round"/>
+            <path class="ribbon" d="M80 15.751L106 12.2844V22H80L80 15.751Z" fill="#B8A9FF" stroke="#323643" stroke-width="4" stroke-linejoin="round"/>
+            <path class="ribbon" d="M68 10H72C76.4183 10 80 13.5817 80 18V22H60V18C60 13.5817 63.5817 10 68 10Z" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
+        </g>
+    </g>
+    <g id="giftbox_body">
+        <path class="box" d="M18 48H122V116C122 117.105 121.105 118 120 118H20C18.8954 118 18 117.105 18 116V48Z" fill="white" stroke="#323643" stroke-width="4"/>
+        <rect class="ribbon" x="57" y="48" width="26" height="70" fill="#B8A9FF" stroke="#323643" stroke-width="4"/>
+        <path class="shadow" opacity="0.1" d="M16 46H124V56C124 58.2091 122.209 60 120 60H20C17.7909 60 16 58.2091 16 56V46Z" fill="#323643"/>
+    </g>
+</g>
+</svg>
