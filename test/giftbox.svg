@@ -75,6 +75,9 @@ g, path, rect {
 #giftbox:hover {
     animation: shake .5s cubic-bezier(.4,.1,.2,1) infinite both;
 }
+#giftbox:active {
+    animation: shake .5s cubic-bezier(.4,.1,.2,1) both;
+}
 #giftbox:active #giftbox_wrap {
     animation:
     scaleDown .5s cubic-bezier(.4,.1,.2,1) both,
