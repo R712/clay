@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 120">
+<style>
+/* for animation */
+@keyframes fireOne {
+    25%  { opacity: .5; }
+    50%  { opacity: 1; }
+    75%  { opacity: .5; }
+}
+@keyframes fireTwo {
+    25%  { opacity: .5; }
+    50%  { opacity: 1; }
+    75%  { opacity: .5; }
+}
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* for fireworks */
+g, path, rect {
+    transform: translate3d(0, 0, 0);
+    transform-origin: center;
+}
+.fire-1,
+.fire-2 {
+    opacity: 0;
+}
+.fireworks .fire-1,
+.fireworks .fire-2 {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    stroke-width: 5px;
+}
+.fireworks .fire-2 {
+    animation-name: fireTwo;
+    animation-delay: .41s;
+}
+.fireworks .fire-1 {
+    opacity: .6;
+    animation-name: fireOne;
+    animation-delay: .71s;
+}
+.fireworks {
+    animation: scaleIn .75s 0s cubic-bezier(.4,.1,.2,1) both;
+}
+</style>
+
+<g class="fireworks" cx="0" cy="0">
+    <path class="fire-1" d="M56.1716 29.4142L57.5858 28L59 29.4142L57.5858 30.8284L56.1716 29.4142ZM106 46.2426L107.414 44.8284L108.828 46.2426L107.414 47.6569L106 46.2426ZM32.8284 86.4142L30 89.2426L32.8284 92.0711L35.6569 89.2426L32.8284 86.4142ZM80 45.2426L82.8284 42.4142L85.6569 45.2426L82.8284 48.0711L80 45.2426ZM43.8284 65.4142L41 68.2426L43.8284 71.0711L46.6569 68.2426L43.8284 65.4142ZM105 88.2426L107.828 85.4142L110.657 88.2426L107.828 91.0711L105 88.2426ZM56.4142 73.8284L55 75.2426L56.4142 76.6569L57.8284 75.2426L56.4142 73.8284Z" fill="#FECA2F"/>
+    <path class="fire-2" d="M86.4142 90L87.8284 88.5858L86.4142 87.1716L85 88.5858L86.4142 90ZM36.5858 73.1716L38 71.7574L36.5858 70.3432L35.1716 71.7574L36.5858 73.1716ZM114 38.7574L111.172 41.5858L108.343 38.7574L111.172 35.9289L114 38.7574ZM59.1716 85.5858L62 82.7574L59.1716 79.9289L56.3431 82.7574L59.1716 85.5858ZM103 59.7574L101.586 61.1716L100.172 59.7574L101.586 58.3432L103 59.7574ZM62.5858 46.1716L64 44.7574L62.5858 43.3431L61.1716 44.7574L62.5858 46.1716ZM33 31.7574L30.1716 34.5858L27.3431 31.7574L30.1716 28.9289L33 31.7574ZM87.5858 44.1716L89 42.7574L87.5858 41.3431L86.1716 42.7574L87.5858 44.1716Z" fill="#FF6A6A"/>
+</g>
+</svg>

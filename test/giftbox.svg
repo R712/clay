@@ -55,8 +55,8 @@ g, path, rect {
 }
 #giftbox:active #giftbox_wrap {
     animation:
-    scaleDown .5s cubic-bezier(.4,.1,.2,1) both,
-    fadeOut .2s .5s ease-out both;
+    scaleDown .5s cubic-bezier(.4,.1,.2,1) both
+    /* fadeOut .2s .5s ease-out both; */
 }
 #giftbox:hover #giftbox_head {
     animation: none;
@@ -68,6 +68,7 @@ g, path, rect {
     animation: blink 1s ease-out infinite both;
 }
 #giftbox #stars {
+    display: none;
     opacity: 0;
 }
 #giftbox:active #stars {

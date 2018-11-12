@@ -32,7 +32,7 @@ body {
 a {
     text-decoration: none;
 }
-.svgs {
+.event {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -40,21 +40,24 @@ a {
     justify-content: center;
     height: 100vh;
 }
-.svgs .box {
+.event .box {
+    position: relative;
     padding: 40px;
+    width: 220px;
+    height: 200px;
     background: url('fireworks.svg') no-repeat;
     background-size: cover;
 }
-.svgs object {
+.event object {
     display: block;
     width: 140px;
     height: 120px;
 }
-h1 {
+.event h1 {
     margin: 0 0 60px;
     font-size: 24px;
 }
-.btn {
+.event .btn {
     width: 280px;
     height: 56px;
     border: 0;
@@ -66,21 +69,49 @@ h1 {
     border-radius: 4px;
     box-shadow: 0 2px 40px rgba(105,70,255,.4);
 }
-.btn:hover {
+.event .btn:hover {
     background: #0C1D4C;
     box-shadow: none;
 }
+.event-result .box {
+    background-image: url('fireworks-result.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box-result {
+    display: inline-block;
+}
 </style>
 <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+<script src="../assets/js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function($) {
+    $('.btn').click(function() {
+        $('.box').addClass('box-opened');
+    });
+});
+</script>
 </head>
 
 <body>
-    <div class="svgs">
+    <div class="event event-default">
         <div class="box">
             <object type="image/svg+xml" data="giftbox.svg">현재 브라우저는 iframe/object을 지원하지 않습니다.</object>
         </div>
         <h1>보따리 출시 이벤트</h1>
         <a href="#" class="btn">보따리 열기</a>
+    </div>
+    <div class="event event-result">
+        <div class="box">
+            <div class="box-result">
+                <strong>500 UPP</strong>
+            </div>
+        </div>
+        <h1>보따리 출시 이벤트</h1>
+        <span><em>500 UPP</em>을 받았습니다!</span>
+        <p>입금되기까지 3~5분의 시간이 소요됩니다.<br />개인 ETH 지갑에서 확인하세요.</p>
     </div>
 </body>
 
