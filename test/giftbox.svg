@@ -2,52 +2,28 @@
 <style>
 /* for animation */
 @keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
-    }
-    30%, 50%, 70% {
-        transform: translate3d(-3px, 0, 0);
-    }
-    40%, 60% {
-        transform: translate3d(4px, 0, 0);
-    }
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
 }
 @keyframes fadeOut {
-    to {
-        opacity: 0;
-    }
+    to { opacity: 0; }
 }
 @keyframes blink {
-    to {
-        opacity: .5;
-    }
+    to { opacity: .5; }
 }
 @keyframes scaleDown {
-    to {
-        transform: scale(.5);
-    }
+    to { transform: scale(.5); }
 }
 @keyframes rotateStar {
-    0% {
-        transform: scale(1) rotateZ(0);
-    }
-    50% {
-        transform: scale(1.5) rotateZ(180deg);
-    }
-    100% {
-        transform: scale(1) rotateZ(360deg);
-    }
+    0% { transform: scale(1) rotateZ(0); }
+    50% { transform: scale(1.5) rotateZ(180deg); }
+    100% { transform: scale(1) rotateZ(360deg); }
 }
 @keyframes openHead {
-    0% {
-        transform: rotateZ(0);
-    }
-    100% {
-        transform: rotateZ(45deg);
-    }
+    0% { transform: rotateZ(0); }
+    100% { transform: rotateZ(45deg); }
 }
 @keyframes scaleIn {
     0% {
@@ -59,8 +35,7 @@
         opacity: 1;
     }
 }
-
-/* for control */
+/* for design */
 g, path, rect {
     transform: translate3d(0, 0, 0);
     transform-origin: center;
