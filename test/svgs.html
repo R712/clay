@@ -28,6 +28,7 @@ body {
     font-size: 15px;
     line-height: 1.85;
     cursor: default;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -39,25 +40,57 @@ a {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    max-height: 100vh;
 }
 .event .box {
     position: relative;
-    padding: 40px;
-    width: 220px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 248px;
     background: url('fireworks.svg') no-repeat;
     background-size: cover;
 }
-.event object {
+.event .box object {
     display: block;
+    margin: 40px 60px;
     width: 140px;
     height: 120px;
 }
+.event .box strong {
+    display: block;
+    padding: 0 12px 2px;
+    background: #0C1D4C;
+    color: #FFF;
+    transform: translate3d(0, 0, 0);
+    transform-origin: center;
+    font-size: 28px;
+    animation: scaleIn .25s .5s cubic-bezier(.4,.1,.2,1) both;
+    border-radius: 4;
+}
 .event h1 {
-    margin: 0 0 60px;
     font-size: 24px;
 }
+.event span {
+    margin-top: 40px;
+    padding: 3px 10px 4px;
+    background: #FAFAFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+.event em {
+    color: #6945FF;
+    font-style: normal;
+}
+.event p {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
 .event .btn {
+    margin-top: 60px;
     width: 280px;
     height: 56px;
     border: 0;
@@ -73,45 +106,81 @@ a {
     background: #0C1D4C;
     box-shadow: none;
 }
-.event-result .box {
-    background-image: url('fireworks-result.svg');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.event .btn-float {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 0;
+    width: 100%;
+    background: #6945FF;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 72px;
+    text-align: center;
+    cursor: pointer;
 }
-.box-result {
-    display: inline-block;
+.event .btn-float:hover {
+    background: #0C1D4C;
+}
+#event-result .box {
+    background-image: url('fireworks-result-star.svg');
+}
+#event-fail .box {
+    background-image: url('fireworks-fail.svg');
+}
+#event-fail .box strong {
+    background: none;
+    color: #0C1D4C;
+}
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 </style>
 <link href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
-<script src="../assets/js/jquery.js"></script>
-<script type="text/javascript">
-$(document).ready(function($) {
-    $('.btn').click(function() {
-        $('.box').addClass('box-opened');
-    });
-});
-</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="event event-default">
+
+    <!-- 이벤트 기본 -->
+    <div id="event-default" class="event">
         <div class="box">
             <object type="image/svg+xml" data="giftbox.svg">현재 브라우저는 iframe/object을 지원하지 않습니다.</object>
         </div>
         <h1>보따리 출시 이벤트</h1>
-        <a href="#" class="btn">보따리 열기</a>
+        <a href="#event-result" class="btn">보따리 열기</a>
     </div>
-    <div class="event event-result">
+
+    <!-- 이벤트 당첨 -->
+    <div id="event-result" class="event">
         <div class="box">
             <div class="box-result">
-                <strong>500 UPP</strong>
+                <strong>축하합니다</strong>
             </div>
         </div>
-        <h1>보따리 출시 이벤트</h1>
         <span><em>500 UPP</em>을 받았습니다!</span>
         <p>입금되기까지 3~5분의 시간이 소요됩니다.<br />개인 ETH 지갑에서 확인하세요.</p>
+        <a href="#event-fail" class="btn-float"><i class="fas fa-share"></i> 공유하기</a>
+    </div>
+
+    <!-- 이벤트 꽝 -->
+    <div id="event-fail" class="event">
+        <div class="box">
+            <div class="box-fail">
+                <strong>꽝</strong>
+            </div>
+        </div>
+        <span>저런, 다음 기회에는 꼭ㅠㅠ</span>
+        <p>보따리는 상시 지급되는 이벤트로<br />다음 수령시에도 꼭 확인해주세요.</p>
+        <a href="#event-default" class="btn-float"><i class="fas fa-share"></i> 공유하기</a>
     </div>
 </body>
 
