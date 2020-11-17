@@ -10,6 +10,8 @@ $blue: #268DFF;
 $darkblue: #0065D4;
 $bg: #F6FBFF;
 $border: #EBF0F6;
+$youtube: #FF0000;
+$yellow: #FBBC05;
 
 /*
     base
@@ -27,6 +29,7 @@ body {
 button,
 input {
     font-family: 'Noto Sans KR', sans-serif;
+    outline: none;
 }
 
 ::placeholder {
@@ -83,6 +86,9 @@ a,
     span {
         color: $txt-gray;
     }
+    a {
+        color: $blue;
+    }
 }
 
 section {
@@ -98,7 +104,7 @@ section {
         background: linear-gradient(0deg, $bg, #FFF);
     }
     &.section {
-        padding: 180px 0;
+        padding: 120px 0;
         .inner {
             max-width: 800px;
         }
@@ -111,20 +117,37 @@ section {
             padding: 0;
             color: $txt-navy;
             font-size: 56px;
-            i {
-                position: absolute;
-                left: -72px;
-                top: 0;
+            .ion {
+                display: block;
+                margin-bottom: 16px;
+                color: $blue;
                 font-size: 64px;
             }
             span {
                 display: block;
             }
         }
+        h3 {
+            margin-bottom: 64px;
+            color: $txt-navy;
+            font-size: 32px;
+            text-align: center;
+            span {
+                display: block;
+            }
+            .ion {
+                margin-bottom: 8px;
+                color: rgba($txt-navy, 25%);
+                font-size: 64px;
+            }
+        }
         p {
             color: $txt-gray;
             font-weight: 300;
         }
+    }
+    &.odd {
+        background: $bg;
     }
     .hero-msg {
         z-index: 1;
@@ -360,6 +383,42 @@ section {
         transform: translateX(-80px) translateY(-40px);
         animation: svgillust 2s linear infinite alternate;
     }
+}
+
+.contact {
+    text-align: center;
+    img {
+        width: 300px;
+    }
+    h4 {
+        margin: 0;
+        color: $txt-navy;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+        word-break: keep-all;
+    }
+    button {
+        margin-top: 20px;
+        border: 0;
+        width: 240px;
+        height: 64px;
+        background: $blue;
+        color: #FFF;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 2px;
+        box-shadow: 0 4px 24px rgba($blue, 40%);
+        transition: all .2s ease;
+        &:hover {
+            background: $darkblue;
+            transform: translateY(2px);
+            box-shadow: 0 2px 16px rgba($darkblue, 40%);
+        }
+    }
+}
+
+.cards {
     .card {
         position: relative;
         margin-top: 40px;
@@ -429,12 +488,12 @@ section {
             font-weight: 700;
             transition: all .2s ease;
         }
-        &:nth-of-type(3) {
+        &:nth-of-type(2) {
             &::before {
                 content: '02';
             }
         }
-        &:nth-of-type(4) {
+        &:nth-of-type(3) {
             &::before {
                 content: '03';
             }
@@ -449,53 +508,380 @@ section {
             }
         }
     }
-    &.contact {
-        padding: 80px 0;
-        background: $border;
-        .inner {
-            max-width: 560px;
-            text-align: center;
-        }
-        img {
-            width: 300px;
-        }
-        h2 {
-            margin: 0;
-            color: $txt-navy;
-            font-weight: 500;
-            font-size: 15px;
-            text-align: center;
-            word-break: keep-all;
-        }
-        button {
-            margin-top: 20px;
-            border: 0;
-            width: 240px;
-            height: 64px;
-            background: $blue;
-            color: #FFF;
+}
+
+.pricing {
+    .pricing-plan {
+        display: flex;
+        flex-direction: row;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 46%;
+        padding: 24px 28px;
+        background: #FFF;
+        border: 2px solid $border;
+        border-radius: 8px;
+        transition: all .2s ease-in-out;
+        header {
+            margin-bottom: 8px;
+            color: $darkblue;
+            font-weight: 700;
             font-size: 18px;
-            cursor: pointer;
-            border-radius: 2px;
-            box-shadow: 0 4px 24px rgba($blue, 40%);
-            transition: all .2s ease;
-            &:hover {
+        }
+        article {
+            color: $txt-navy;
+            font-weight: 300;
+            font-size: 13px;
+        }
+        footer {
+            padding: 16px 0 24px;
+            button {
+                display: block;
+                width: 100%;
+                height: 48px;
+                border: 0;
+                background: $blue;
+                color: #FFF;
+                font-weight: 700;
+                font-size: 15px;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: all .2s ease;
+            }
+        }
+        .price-label {
+            margin-bottom: 16px;
+            color: $darkblue;
+            strong {
+                font-weight: 700;
+                font-size: 24px;
+            }
+            small {
+                padding-left: 4px;
+                font-weight: 300;
+                font-size: 13px;
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color: $txt-navy;
+        }
+        li {
+            margin: 4px 0;
+            padding: 0;
+        }
+        .ion {
+            width: 24px;
+            color: $blue;
+        }
+        &:nth-child(2) {
+            margin-left: 4%;
+            width: 50%;
+            border: 2px solid $blue;
+            background: $bg;
+        }
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px $border;
+            button {
                 background: $darkblue;
-                transform: translateY(2px);
-                box-shadow: 0 2px 16px rgba($darkblue, 40%);
+                box-shadow: 0 2px 8px rgba($darkblue, 40%);
             }
         }
     }
 }
 
-.page-footer {
-    background: $border;
-    .inner {
-        margin: 0 auto;
-        padding: 24px 0 64px;
-        max-width: 720px;
-        border-top: 1px dotted darken($border, 10%);
+.balloons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .balloon {
+        position: relative;
+        margin: 8px 40px 8px 120px;
+        padding: 24px 24px 24px 128px;
+        height: 80px;
+        background: #FFF;
+        color: $txt-navy;
+        box-shadow: 0 8px 16px rgba($txt-gray, 10%);
+        border-radius: 8px;
+        transition: all .2s ease-in-out;
+        .avatar {
+            position: absolute;
+            left: 24px;
+            top: 24px;
+        }
+        header {
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        article {
+            font-weight: 300;
+            font-size: 15px;
+            word-break: keep-all;
+        }
+        footer {
+            z-index: 1;
+            position: absolute;
+            right: -40px;
+            bottom: -24px;
+            padding: 6px 16px 8px;
+            background: $border;
+            color: $yellow;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        &:nth-child(odd) {
+            margin: 8px 120px 8px 40px;
+        }
+        &:hover {
+            z-index: 5;
+            transform: scale(1.08);
+        }
     }
+    &:hover {
+        .balloon {
+            opacity: .4;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.caution {
+    margin: 120px;
+    padding: 16px 32px;
+    background: rgba($border, 40%);
+    color: rgba($txt-navy, 80%);
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.75;
+    h4 {
+        margin: 8px 0;
+        padding: 0;
+        font-size: 13px;
+    }
+    ul {
+        list-style: circle;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin-left: 24px;
+        word-break: keep-all;
+    }
+}
+
+.avatar {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .ion-logo-youtube {
+        position: absolute;
+        right: -4px;
+        bottom: -4px;
+        color: $youtube;
+        font-size: 24px;
+    }
+}
+
+
+/*
+    tooltip
+    부모 영역 area에 .has-tooltip 클래스를 준 후
+    자식요소에 p element가 있을 경우 자동으로 툴팁처리.
+*/
+
+.has-tooltip {
+    position: relative;
+    line-height: 1.75;
+    strong {
+        color: $darkblue;
+        font-weight: 500;
+        font-size: 15px;
+        cursor: help;
+        &:hover+p {
+            z-index: 1;
+            display: block;
+            opacity: 1;
+        }
+    }
+    p {
+        opacity: 0;
+        left: 0;
+        top: 32px;
+        position: absolute;
+        margin: 0 28px;
+        padding: 16px 24px;
+        border: 1px solid $border;
+        background: #FFF;
+        font-size: 13px;
+        box-shadow: 0 4px 16px rgba($border, 50%);
+        transition: all .2s ease;
+    }
+}
+
+
+/*
+    form styling
+    .btn, .form-input, .form-label
+    버튼, 인풋, 라벨 등
+*/
+
+.btn {
+    box-sizing: border-box;
+    height: 56px;
+    border: 1px solid $border;
+    background: $bg;
+    color: $txt-navy;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    &-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 4px 0;
+        padding-bottom: 2px;
+        width: 100%;
+        font-size: 15px;
+    }
+    &:hover {
+        border-color: rgba($txt-navy, 25%);
+    }
+    &-kakao {
+        border-color: darken($yellow, 4%);
+        background: $yellow;
+        color: darken($yellow, 40%);
+        &:hover {
+            background: lighten($yellow, 8%);
+        }
+    }
+    &-txt {
+        height: inherit;
+        border: 0;
+        background: none;
+        color: $txt-navy;
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
+
+.form-label {
+    display: block;
+    margin: 8px 0;
+    padding: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    span {
+        position: relative;
+        display: flex;
+        color: $txt-navy;
+        font-weight: 300;
+        &::before {
+            content: '';
+            display: flex;
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $border;
+            justify-content: center;
+            border-radius: 2px;
+            transition: all .2s ease-in-out;
+        }
+    }
+    input {
+        position: absolute;
+        left: -100vw;
+        top: -100vh;
+        opacity: 0;
+        &:hover+span::before {
+            border-color: rgba($txt-navy, 25%);
+            background: $bg;
+        }
+    }
+    input:checked+span::before {
+        content: '\2713';
+        border-color: $darkblue;
+        background: $blue;
+        color: #FFF;
+        font-weight: 700;
+    }
+}
+
+
+/*
+    popup layer
+    .blind 와 .layer 를 같이 쓰는 팝업레이어 스타일
+*/
+
+.blind {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba($txt-navy, 25%);
+    .layer {
+        box-sizing: border-box;
+        max-width: 400px;
+        background: #FFF;
+        border-radius: 2px;
+        box-shadow: 0 4px 24px rgba($txt-navy, 10%);
+        header {
+            padding: 16px 0;
+            background: $bg;
+            color: $txt-navy;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 2px 2px 0 0;
+        }
+        .layer-inner {
+            padding: 0 40px;
+        }
+        footer {
+            margin-top: 24px;
+            padding: 16px;
+            border-top: 1px dotted $border;
+            text-align: center;
+        }
+    }
+    dl {
+        margin: 24px 0;
+        color: $txt-navy;
+        text-align: center;
+        dt {
+            font-size: 18px;
+        }
+        dd {
+            margin: 0;
+            font-size: 24px;
+        }
+    }
+}
+
+.page-footer {
+    margin: 120px auto 0;
+    padding: 24px 0 64px;
+    border-top: 1px dotted darken($border, 10%);
     address {
         color: rgba($txt-navy, 80%);
         font-style: normal;
@@ -522,6 +908,9 @@ section {
         em {
             color: $darkblue;
             font-style: normal;
+        }
+        a {
+            margin-right: 8px;
         }
     }
 }

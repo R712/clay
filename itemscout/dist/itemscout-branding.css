@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
     style config
 */
@@ -17,6 +18,7 @@ body {
 button,
 input {
   font-family: "Noto Sans KR", sans-serif;
+  outline: none;
 }
 
 ::placeholder {
@@ -64,6 +66,9 @@ a,
 .brand span {
   color: #636772;
 }
+.brand a {
+  color: #268DFF;
+}
 
 section {
   box-sizing: border-box;
@@ -79,7 +84,7 @@ section.hero {
   background: linear-gradient(0deg, #F6FBFF, #FFF);
 }
 section.section {
-  padding: 180px 0;
+  padding: 120px 0;
 }
 section.section .inner {
   max-width: 800px;
@@ -94,18 +99,35 @@ section.section h2 {
   color: #001C34;
   font-size: 56px;
 }
-section.section h2 i {
-  position: absolute;
-  left: -72px;
-  top: 0;
+section.section h2 .ion {
+  display: block;
+  margin-bottom: 16px;
+  color: #268DFF;
   font-size: 64px;
 }
 section.section h2 span {
   display: block;
 }
+section.section h3 {
+  margin-bottom: 64px;
+  color: #001C34;
+  font-size: 32px;
+  text-align: center;
+}
+section.section h3 span {
+  display: block;
+}
+section.section h3 .ion {
+  margin-bottom: 8px;
+  color: rgba(0, 28, 52, 0.25);
+  font-size: 64px;
+}
 section.section p {
   color: #636772;
   font-weight: 300;
+}
+section.odd {
+  background: #F6FBFF;
 }
 section .hero-msg {
   z-index: 1;
@@ -341,103 +363,14 @@ section .svg-illust {
   transform: translateX(-80px) translateY(-40px);
   animation: svgillust 2s linear infinite alternate;
 }
-section .card {
-  position: relative;
-  margin-top: 40px;
-  padding: 40px 56px;
-  box-shadow: 0 8px 24px rgba(0, 28, 52, 0.08);
-  border-radius: 16px;
-  transform: translateY(0);
-  transition: all 0.2s ease-in-out;
-}
-section .card header {
-  padding-bottom: 8px;
-  width: 50%;
-  font-size: 24px;
-  font-weight: 700;
-}
-section .card article {
-  width: 50%;
-  color: #636772;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.75;
-  word-break: keep-all;
-}
-section .card article a {
-  display: block;
-  margin-top: 12px;
-  color: #268DFF;
-  text-decoration: none;
-}
-section .card article a .icon {
-  color: #268DFF;
-  opacity: 0.6;
-}
-section .card article a:hover {
-  font-weight: 700;
-}
-section .card footer {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40%;
-  padding: 40px;
-}
-section .card footer em {
-  display: block;
-  color: #268DFF;
-  font-size: 12px;
-  font-weight: 500;
-  font-style: normal;
-  letter-spacing: 4px;
-}
-section .card footer p {
-  display: inline-block;
-  margin: 12px 0 0 0;
-  padding: 8px 12px;
-  background: rgba(0, 28, 52, 0.04);
-  color: rgba(0, 28, 52, 0.6);
-  font-size: 13px;
-  border-radius: 24px;
-}
-section .card::before {
-  content: "01";
-  position: absolute;
-  left: -48px;
-  top: 0;
-  color: rgba(99, 103, 114, 0.15);
-  font-size: 24px;
-  font-weight: 700;
-  transition: all 0.2s ease;
-}
-section .card:nth-of-type(3)::before {
-  content: "02";
-}
-section .card:nth-of-type(4)::before {
-  content: "03";
-}
-section .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-sizing: 0 8px 24px rgba(0, 28, 52, 0.12);
-}
-section .card:hover::before {
-  left: -56px;
-  color: #268DFF;
-  font-size: 32px;
-}
-section.contact {
-  padding: 80px 0;
-  background: #EBF0F6;
-}
-section.contact .inner {
-  max-width: 560px;
+
+.contact {
   text-align: center;
 }
-section.contact img {
+.contact img {
   width: 300px;
 }
-section.contact h2 {
+.contact h4 {
   margin: 0;
   color: #001C34;
   font-weight: 500;
@@ -445,7 +378,7 @@ section.contact h2 {
   text-align: center;
   word-break: keep-all;
 }
-section.contact button {
+.contact button {
   margin-top: 20px;
   border: 0;
   width: 240px;
@@ -458,19 +391,459 @@ section.contact button {
   box-shadow: 0 4px 24px rgba(38, 141, 255, 0.4);
   transition: all 0.2s ease;
 }
-section.contact button:hover {
+.contact button:hover {
   background: #0065D4;
   transform: translateY(2px);
   box-shadow: 0 2px 16px rgba(0, 101, 212, 0.4);
 }
 
-.page-footer {
-  background: #EBF0F6;
+.cards .card {
+  position: relative;
+  margin-top: 40px;
+  padding: 40px 56px;
+  box-shadow: 0 8px 24px rgba(0, 28, 52, 0.08);
+  border-radius: 16px;
+  transform: translateY(0);
+  transition: all 0.2s ease-in-out;
 }
-.page-footer .inner {
-  margin: 0 auto;
+.cards .card header {
+  padding-bottom: 8px;
+  width: 50%;
+  font-size: 24px;
+  font-weight: 700;
+}
+.cards .card article {
+  width: 50%;
+  color: #636772;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.75;
+  word-break: keep-all;
+}
+.cards .card article a {
+  display: block;
+  margin-top: 12px;
+  color: #268DFF;
+  text-decoration: none;
+}
+.cards .card article a .icon {
+  color: #268DFF;
+  opacity: 0.6;
+}
+.cards .card article a:hover {
+  font-weight: 700;
+}
+.cards .card footer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  padding: 40px;
+}
+.cards .card footer em {
+  display: block;
+  color: #268DFF;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 4px;
+}
+.cards .card footer p {
+  display: inline-block;
+  margin: 12px 0 0 0;
+  padding: 8px 12px;
+  background: rgba(0, 28, 52, 0.04);
+  color: rgba(0, 28, 52, 0.6);
+  font-size: 13px;
+  border-radius: 24px;
+}
+.cards .card::before {
+  content: "01";
+  position: absolute;
+  left: -48px;
+  top: 0;
+  color: rgba(99, 103, 114, 0.15);
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.cards .card:nth-of-type(2)::before {
+  content: "02";
+}
+.cards .card:nth-of-type(3)::before {
+  content: "03";
+}
+.cards .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-sizing: 0 8px 24px rgba(0, 28, 52, 0.12);
+}
+.cards .card:hover::before {
+  left: -56px;
+  color: #268DFF;
+  font-size: 32px;
+}
+
+.pricing .pricing-plan {
+  display: flex;
+  flex-direction: row;
+}
+.pricing .card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 46%;
+  padding: 24px 28px;
+  background: #FFF;
+  border: 2px solid #EBF0F6;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.pricing .card header {
+  margin-bottom: 8px;
+  color: #0065D4;
+  font-weight: 700;
+  font-size: 18px;
+}
+.pricing .card article {
+  color: #001C34;
+  font-weight: 300;
+  font-size: 13px;
+}
+.pricing .card footer {
+  padding: 16px 0 24px;
+}
+.pricing .card footer button {
+  display: block;
+  width: 100%;
+  height: 48px;
+  border: 0;
+  background: #268DFF;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pricing .card .price-label {
+  margin-bottom: 16px;
+  color: #0065D4;
+}
+.pricing .card .price-label strong {
+  font-weight: 700;
+  font-size: 24px;
+}
+.pricing .card .price-label small {
+  padding-left: 4px;
+  font-weight: 300;
+  font-size: 13px;
+}
+.pricing .card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #001C34;
+}
+.pricing .card li {
+  margin: 4px 0;
+  padding: 0;
+}
+.pricing .card .ion {
+  width: 24px;
+  color: #268DFF;
+}
+.pricing .card:nth-child(2) {
+  margin-left: 4%;
+  width: 50%;
+  border: 2px solid #268DFF;
+  background: #F6FBFF;
+}
+.pricing .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px #EBF0F6;
+}
+.pricing .card:hover button {
+  background: #0065D4;
+  box-shadow: 0 2px 8px rgba(0, 101, 212, 0.4);
+}
+
+.balloons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.balloons .balloon {
+  position: relative;
+  margin: 8px 40px 8px 120px;
+  padding: 24px 24px 24px 128px;
+  height: 80px;
+  background: #FFF;
+  color: #001C34;
+  box-shadow: 0 8px 16px rgba(99, 103, 114, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.balloons .balloon .avatar {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+}
+.balloons .balloon header {
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.balloons .balloon article {
+  font-weight: 300;
+  font-size: 15px;
+  word-break: keep-all;
+}
+.balloons .balloon footer {
+  z-index: 1;
+  position: absolute;
+  right: -40px;
+  bottom: -24px;
+  padding: 6px 16px 8px;
+  background: #EBF0F6;
+  color: #FBBC05;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 20px;
+}
+.balloons .balloon:nth-child(odd) {
+  margin: 8px 120px 8px 40px;
+}
+.balloons .balloon:hover {
+  z-index: 5;
+  transform: scale(1.08);
+}
+.balloons:hover .balloon {
+  opacity: 0.4;
+}
+.balloons:hover .balloon:hover {
+  opacity: 1;
+}
+
+.caution {
+  margin: 120px;
+  padding: 16px 32px;
+  background: rgba(235, 240, 246, 0.4);
+  color: rgba(0, 28, 52, 0.8);
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.caution h4 {
+  margin: 8px 0;
+  padding: 0;
+  font-size: 13px;
+}
+.caution ul {
+  list-style: circle;
+  margin: 0;
+  padding: 0;
+}
+.caution li {
+  margin-left: 24px;
+  word-break: keep-all;
+}
+
+.avatar {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+}
+.avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.avatar .ion-logo-youtube {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  color: #FF0000;
+  font-size: 24px;
+}
+
+/*
+    tooltip
+    부모 영역 area에 .has-tooltip 클래스를 준 후
+    자식요소에 p element가 있을 경우 자동으로 툴팁처리.
+*/
+.has-tooltip {
+  position: relative;
+  line-height: 1.75;
+}
+.has-tooltip strong {
+  color: #0065D4;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: help;
+}
+.has-tooltip strong:hover + p {
+  z-index: 1;
+  display: block;
+  opacity: 1;
+}
+.has-tooltip p {
+  opacity: 0;
+  left: 0;
+  top: 32px;
+  position: absolute;
+  margin: 0 28px;
+  padding: 16px 24px;
+  border: 1px solid #EBF0F6;
+  background: #FFF;
+  font-size: 13px;
+  box-shadow: 0 4px 16px rgba(235, 240, 246, 0.5);
+  transition: all 0.2s ease;
+}
+
+/*
+    form styling
+    .btn, .form-input, .form-label
+    버튼, 인풋, 라벨 등
+*/
+.btn {
+  box-sizing: border-box;
+  height: 56px;
+  border: 1px solid #EBF0F6;
+  background: #F6FBFF;
+  color: #001C34;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.btn-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px 0;
+  padding-bottom: 2px;
+  width: 100%;
+  font-size: 15px;
+}
+.btn:hover {
+  border-color: rgba(0, 28, 52, 0.25);
+}
+.btn-kakao {
+  border-color: #e8ad04;
+  background: #FBBC05;
+  color: #332601;
+}
+.btn-kakao:hover {
+  background: #fcc72d;
+}
+.btn-txt {
+  height: inherit;
+  border: 0;
+  background: none;
+  color: #001C34;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.form-label {
+  display: block;
+  margin: 8px 0;
+  padding: 4px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.form-label span {
+  position: relative;
+  display: flex;
+  color: #001C34;
+  font-weight: 300;
+}
+.form-label span::before {
+  content: "";
+  display: flex;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EBF0F6;
+  justify-content: center;
+  border-radius: 2px;
+  transition: all 0.2s ease-in-out;
+}
+.form-label input {
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
+  opacity: 0;
+}
+.form-label input:hover + span::before {
+  border-color: rgba(0, 28, 52, 0.25);
+  background: #F6FBFF;
+}
+.form-label input:checked + span::before {
+  content: "✓";
+  border-color: #0065D4;
+  background: #268DFF;
+  color: #FFF;
+  font-weight: 700;
+}
+
+/*
+    popup layer
+    .blind 와 .layer 를 같이 쓰는 팝업레이어 스타일
+*/
+.blind {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 28, 52, 0.25);
+}
+.blind .layer {
+  box-sizing: border-box;
+  max-width: 400px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 4px 24px rgba(0, 28, 52, 0.1);
+}
+.blind .layer header {
+  padding: 16px 0;
+  background: #F6FBFF;
+  color: #001C34;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 2px 2px 0 0;
+}
+.blind .layer .layer-inner {
+  padding: 0 40px;
+}
+.blind .layer footer {
+  margin-top: 24px;
+  padding: 16px;
+  border-top: 1px dotted #EBF0F6;
+  text-align: center;
+}
+.blind dl {
+  margin: 24px 0;
+  color: #001C34;
+  text-align: center;
+}
+.blind dl dt {
+  font-size: 18px;
+}
+.blind dl dd {
+  margin: 0;
+  font-size: 24px;
+}
+
+.page-footer {
+  margin: 120px auto 0;
   padding: 24px 0 64px;
-  max-width: 720px;
   border-top: 1px dotted #c8d6e6;
 }
 .page-footer address {
@@ -500,6 +873,9 @@ section.contact button:hover {
 .page-footer nav em {
   color: #0065D4;
   font-style: normal;
+}
+.page-footer nav a {
+  margin-right: 8px;
 }
 
 /*
