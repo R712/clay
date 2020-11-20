@@ -25,133 +25,210 @@
     </script>
 </head>
 
-<body>
+<body data-nav="introduce">
+    <!-- GNB 위치 추적용 data-nav -->
 
-    <div id="branding">
+    <!-- 레이아웃 감싸기 -->
+    <div class="itemscout-wrap">
 
-        <div class="brand">
-            <strong>공지사항</strong>
-            <span>멤버십 정책을 새롭고 간결하게 단장하였습니다.</span>
-            <a href="membership.html">확인하기</a>
+        <!--
+            GNB area
+        -->
+        <div class="gnb">
+            <label class="btn-collapse">
+                <input type="checkbox" />
+                <i class="ion ion-ios-reorder"></i>
+            </label>
+            <h1>
+                <img src="dist/svg/logo-symbol.svg" alt="logo" />
+                <img src="dist/svg/logo-typo.svg" alt="itemscout" />
+            </h1>
+            <nav>
+                <a href="#">
+                    <i class="ion ion-ios-stats"></i>
+                    <span>대시보드</span>
+                </a>
+                <a href="#">
+                    <i class="ion ion-ios-compass"></i>
+                    <span>아이템 발굴</span>
+                </a>
+                <a href="#">
+                    <i class="ion ion-ios-flask"></i>
+                    <span>키워드 분석</span>
+                </a>
+                <a href="#">
+                    <i class="ion ion-ios-eye"></i>
+                    <span>랭킹 추적</span>
+                </a>
+            </nav>
+            <nav>
+                <a href="#">
+                    <i class="ion ion-ios-school"></i>
+                    <span>아이템 스쿨</span>
+                </a>
+                <a href="#">
+                    <i class="ion ion-ios-cafe"></i>
+                    <span>게시판</span>
+                </a>
+                <a href="#" class="nav-introduce">
+                    <i class="ion ion-ios-book"></i>
+                    <span>서비스 소개</span>
+                </a>
+                <a href="#">
+                    <i class="ion ion-ios-rocket"></i>
+                    <span>멤버십 소개</span>
+                </a>
+            </nav>
         </div>
 
-        <section class="hero">
+        <!--
+            우측 컨테이너 area
+        -->
+        <div class="container">
 
             <!--
-                for moving particle decoration
+                사이트 최상단 리본: 공지사항 및 로그인 정보
             -->
-            <div class="svg-cloud">
-                <div class="svg-cloud-inner">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 7.8l-7.7 7.7-4-4-5.7 5.7"/><path d="M15 7h6v6"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
+            <div class="ribbon">
+                <div class="notice">
+                    <strong>공지사항</strong>
+                    <span>멤버십 정책을 새롭고 간결하게 단장하였습니다.</span>
+                    <a href="membership.html">확인하기</a>
+                </div>
+                <div class="account">
+                    <div class="msg-card">
+                        <span>매출 상승의 지름길, 지금 무료로 시작해보세요</span>
+                        <i class="ion ion-ios-arrow-dropright-circle"></i>
+                    </div>
+                    <button class="btn btn-md btn-point">로그인 및 가입</button>
                 </div>
             </div>
 
-            <div class="inner">
-                <div class="hero-msg">
-                    <div class="wow fadeInDown">
-                        <span>잘 나가는 셀러의 비결,</span>
-                        <span>데이터가 중요합니다.</span>
-                    </div>
-                    <div class="wow flipInX">
-                        <div class="hero-input">
-                            <ul class="hero-input-word">
-                                <li>원피스</li>
-                                <li>가디건</li>
-                                <li>차렵이불</li>
-                            </ul>
-                            <div class="hero-input-typing"></div>
-                            <i class="icon ion-md-search"></i>
-                            <a href="https://itemscout.io/keyword" onclick="javascript:;">검색해보기</a>
+            <!--
+                컨텐츠 본문 area
+            -->
+            <main class="content">
+
+                <!--
+                    서비스 소개 최상단 hero area
+                -->
+                <section class="hero">
+
+                    <!--
+                    for moving particle decoration
+                -->
+                    <div class="svg-cloud">
+                        <div class="svg-cloud-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 7.8l-7.7 7.7-4-4-5.7 5.7"/><path d="M15 7h6v6"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"></line><circle cx="6.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="17.5" r="2.5"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="268DFF" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"/></svg>
                         </div>
                     </div>
-                </div>
-                <div class="hero-casestudy wow fadeInUp slow" data-wow-delay="1s">
-                    <h4>itemscout.io</h4>
-                    <ul>
-                        <li onclick="location.href='#itemscout'">
-                            <i class="deco icon ion-md-thumbs-up"></i>
-                            <span>아이템스카우트, 이런 점이 좋아요.</span>
-                            <a href="#">더 알아보기 <i class="icon ion-ios-arrow-forward"></i></a>
-                        </li>
-                        <li>
-                            <i class="deco icon ion-md-school"></i>
-                            <span>셀러들의 노하우, 아낌없이 함께 나누고 성장해보세요.</span>
-                            <a href="#">아이템스쿨 보기 <i class="icon ion-ios-arrow-forward"></i></a>
-                        </li>
-                        <li>
-                            <i class="deco icon ion-md-ribbon"></i>
-                            <span>더 많은 기능이 필요하신가요?</span>
-                            <a href="./membership.html">멤버십 비교하기 <i class="icon ion-ios-arrow-forward"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <section id="itemscout" class="section">
-            <div class="inner">
-                <div class="section-header wow fadeInDown">
-                    <img src="dist/svg/introduce.svg" class="svg-illust" data-wow-delay="1s" />
-                    <h2>
-                        <span>아이템스카우트,</span>
-                        <span>이런 점이 좋습니다.</span>
-                    </h2>
-                    <p>온라인 창업, 진입장벽이 낮은만큼 확실한 전략이 필요해요.<br/>사장님의 안목에 믿을 수 있는 데이터까지 더해보세요!</p>
-                </div>
-                <div class="cards">
-                    <div class="card wow fadeInLeft slow" data-wow-delay="1s">
-                        <header>보다 전략적인 아이템발굴</header>
-                        <article>희망하는 카테고리에서 기간/성별/연령층까지 섬세하게 레이더를 좁혀드려요. 지금 제일 트렌디한 키워드는 물론 앞으로의 가능성있는 키워드와 아이템을 데이터를 기반으로 발굴해보세요. <a href="#">서비스 바로가기 <i class="icon ion-ios-arrow-forward"></i></a></article>
-                        <footer class="wow fadeIn slow" data-wow-delay="2s">
-                            <p>작년 겨울에 많이 검색된</p>
-                            <p>연말 연시 많이 검색된</p>
-                            <p>20대 여성들이 많이 찾는</p>
-                            <p>30대 남성들이 많이 찾는</p>
-                            <p>여성의류 아우터에서 인기</p>
-                        </footer>
+                    <div class="inner">
+                        <div class="hero-msg">
+                            <div class="wow fadeInDown">
+                                <span>잘 나가는 셀러의 비결,</span>
+                                <span>데이터가 중요합니다.</span>
+                            </div>
+                            <div class="wow flipInX">
+                                <div class="hero-input">
+                                    <ul class="hero-input-word">
+                                        <li>원피스</li>
+                                        <li>가디건</li>
+                                        <li>차렵이불</li>
+                                    </ul>
+                                    <div class="hero-input-typing"></div>
+                                    <i class="icon ion-md-search"></i>
+                                    <a href="https://itemscout.io/keyword" onclick="javascript:;">검색해보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-casestudy wow fadeInUp slow" data-wow-delay="1s">
+                            <h4>itemscout.io</h4>
+                            <ul>
+                                <li onclick="location.href='#itemscout'">
+                                    <i class="deco icon ion-md-thumbs-up"></i>
+                                    <span>아이템스카우트, 이런 점이 좋아요.</span>
+                                    <a href="#">더 알아보기 <i class="icon ion-ios-arrow-forward"></i></a>
+                                </li>
+                                <li>
+                                    <i class="deco icon ion-md-school"></i>
+                                    <span>셀러들의 노하우, 아낌없이 함께 나누고 성장해보세요.</span>
+                                    <a href="#">아이템스쿨 보기 <i class="icon ion-ios-arrow-forward"></i></a>
+                                </li>
+                                <li>
+                                    <i class="deco icon ion-md-ribbon"></i>
+                                    <span>더 많은 기능이 필요하신가요?</span>
+                                    <a href="./membership.html">멤버십 비교하기 <i class="icon ion-ios-arrow-forward"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card wow fadeInRight slow" data-wow-delay="1s">
-                        <header>키워드 집중 분석</header>
-                        <article>관심있는 특정 키워드를 검색하면 꼼꼼하게 시장성과 연관 데이터까지 분석해서 검증해드려요. 소싱을 위한 도매상도 자연스럽게 찾아보세요. <a href="#">서비스 바로가기 <i class="icon ion-ios-arrow-forward"></i></a></article>
-                        <footer class="wow fadeIn slow" data-wow-delay="2s">
-                            <p>에스닉 원피스</p>
-                            <p>샤오미 보조배터리</p>
-                            <p>핸드메이드 코트</p>
-                            <p>남자친구 선물</p>
-                            <p>휴대폰 케이스</p>
-                            <p>효도 선물</p>
-                            <p>면역력 강화</p>
-                        </footer>
-                    </div>
-                    <div class="card wow fadeInLeft slow" data-wow-delay="1s">
-                        <header>깐깐하게 랭킹 추적</header>
-                        <article>내 스토어팜 및 경쟁사의 상품을 북마크하고 키워드/기간별 순위 변동을 추적합니다. 상품의 최저가 추이 및 구매자들의 후기 상태도 추적할 수 있어요. 시장 트렌드의 빠른 변화도 역시 아이템스카우트와 함께라면 어렵지 않아요. <a href="#">서비스 바로가기 <i class="icon ion-ios-arrow-forward"></i></a></article>
-                        <footer class="wow fadeIn slow" data-wow-delay="2s">
-                            <p>스토어의 효자템은 뭘까?</p>
-                            <p>대체 상품이 필요한 때!</p>
-                            <p>내 스토어의 현위치는 어디쯤일까?</p>
-                            <p>벤치마킹 스토어의 상품 추이 리서치까지!</p>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <section id="contact" class="section odd">
-            <div class="inner">
-                <div class="contact">
-                    <img src="dist/svg/contact.svg" class="wow fadeInDown" />
-                    <h4 class="wow fadeInDown">아이템스카우트팀은 더 나은 온라인커머스 시작을 위해<br/>어떤 데이터를 어떻게 제공하면 좋을까 고민하고 만들어가고 있습니다.<br/>혹시 제안하고 싶은 내용이 있나요?</h4>
-                    <button type="button" onclick="" class="wow fadeInUp slow">이메일로 제안하기</button>
-                </div>
-                <div class="page-footer">
-                    <address>
+                <section id="itemscout" class="section">
+                    <div class="inner">
+                        <div class="section-header wow fadeInDown">
+                            <img src="dist/svg/introduce.svg" class="svg-illust" data-wow-delay="1s" />
+                            <h2>
+                                <span>아이템스카우트,</span>
+                                <span>이런 점이 좋습니다.</span>
+                            </h2>
+                            <p>온라인 창업, 진입장벽이 낮은만큼 확실한 전략이 필요해요.<br/>사장님의 안목에 믿을 수 있는 데이터까지 더해보세요!</p>
+                        </div>
+                        <div class="cards">
+                            <div class="card wow fadeInLeft slow" data-wow-delay="1s">
+                                <header>보다 전략적인 아이템발굴</header>
+                                <article>희망하는 카테고리에서 기간/성별/연령층까지 섬세하게 레이더를 좁혀드려요. 지금 제일 트렌디한 키워드는 물론 앞으로의 가능성있는 키워드와 아이템을 데이터를 기반으로 발굴해보세요. <a href="#">서비스 바로가기 <i class="icon ion-ios-arrow-forward"></i></a></article>
+                                <footer class="wow fadeIn slow" data-wow-delay="2s">
+                                    <p>작년 겨울에 많이 검색된</p>
+                                    <p>연말 연시 많이 검색된</p>
+                                    <p>20대 여성들이 많이 찾는</p>
+                                    <p>30대 남성들이 많이 찾는</p>
+                                    <p>여성의류 아우터에서 인기</p>
+                                </footer>
+                            </div>
+                            <div class="card wow fadeInRight slow" data-wow-delay="1s">
+                                <header>키워드 집중 분석</header>
+                                <article>관심있는 특정 키워드를 검색하면 꼼꼼하게 시장성과 연관 데이터까지 분석해서 검증해드려요. 소싱을 위한 도매상도 자연스럽게 찾아보세요. <a href="#">서비스 바로가기 <i class="icon ion-ios-arrow-forward"></i></a></article>
+                                <footer class="wow fadeIn slow" data-wow-delay="2s">
+                                    <p>에스닉 원피스</p>
+                                    <p>샤오미 보조배터리</p>
+                                    <p>핸드메이드 코트</p>
+                                    <p>남자친구 선물</p>
+                                    <p>휴대폰 케이스</p>
+                                    <p>효도 선물</p>
+                                    <p>면역력 강화</p>
+                                </footer>
+                            </div>
+                            <div class="card wow fadeInLeft slow" data-wow-delay="1s">
+                                <header>깐깐하게 랭킹 추적</header>
+                                <article>내 스토어팜 및 경쟁사의 상품을 북마크하고 키워드/기간별 순위 변동을 추적합니다. 상품의 최저가 추이 및 구매자들의 후기 상태도 추적할 수 있어요. 시장 트렌드의 빠른 변화도 역시 아이템스카우트와 함께라면 어렵지 않아요. <a href="#">서비스 바로가기 <i class="icon ion-ios-arrow-forward"></i></a></article>
+                                <footer class="wow fadeIn slow" data-wow-delay="2s">
+                                    <p>스토어의 효자템은 뭘까?</p>
+                                    <p>대체 상품이 필요한 때!</p>
+                                    <p>내 스토어의 현위치는 어디쯤일까?</p>
+                                    <p>벤치마킹 스토어의 상품 추이 리서치까지!</p>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact" class="section odd">
+                    <div class="inner">
+                        <div class="contact">
+                            <img src="dist/svg/contact.svg" class="wow fadeInDown" />
+                            <h4 class="wow fadeInDown">아이템스카우트팀은 더 나은 온라인커머스 시작을 위해<br/>어떤 데이터를 어떻게 제공하면 좋을까 고민하고 만들어가고 있습니다.<br/>혹시 제안하고 싶은 내용이 있나요?</h4>
+                            <button type="button" onclick="" class="wow fadeInUp slow">이메일로 제안하기</button>
+                        </div>
+                        <div class="page-footer">
+                            <address>
                         <a href="https://itemscout.io">아이템스카우트</a>
                         <span>상호명: 주식회사 문리버</span>
                         <span>사업자 등록번호: 120-88-01280</span>
@@ -160,14 +237,18 @@
                         <span>통신판매신고번호: 제 2020-서울강남-02113호</span>
                         <span>전화문의: 070-8833-3002</span>
                     </address>
-                    <nav>
-                        <a href="#">개인정보 처리방침</a>
-                        <a href="#">이용약관</a>
-                        <a href="#">제휴문의: <em>help@itemscout.io</em></a>
-                    </nav>
-                </div>
-            </div>
-        </section>
+                            <nav>
+                                <a href="#">개인정보 처리방침</a>
+                                <a href="#">이용약관</a>
+                                <a href="#">제휴문의: <em>help@itemscout.io</em></a>
+                            </nav>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+        </div>
 
     </div>
 
@@ -211,6 +292,16 @@
                 }, 1000);
             }
         }
+
+        const gnb = $('.gnb');
+        const itemscoutWrap = $('.itemscout-wrap');
+        gnb.on('click', '.btn-collapse', function() {
+            if ($('.btn-collapse input').is(':checked')) {
+                itemscoutWrap.addClass('collapsed');
+            } else {
+                itemscoutWrap.removeClass('collapsed');
+            }
+        });
     </script>
 
 </body>

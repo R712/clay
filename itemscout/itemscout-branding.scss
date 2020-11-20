@@ -8,8 +8,10 @@ $txt-gray: #636772;
 $txt-dark: #2F3136;
 $blue: #268DFF;
 $darkblue: #0065D4;
+$bgblue: #F2F8FF;
 $bg: #F6FBFF;
 $border: #EBF0F6;
+$border-deep: #C8D6E6;
 $youtube: #FF0000;
 $yellow: #FBBC05;
 
@@ -22,8 +24,13 @@ body {
     padding: 0;
     color: $txt-dark;
     font-family: 'Noto Sans KR', sans-serif;
+    font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     font-size: 100%;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     cursor: default;
+    overflow-x: hidden;
 }
 
 button,
@@ -55,6 +62,160 @@ a,
     styling start
 */
 
+
+/* for layout grid */
+
+.itemscout-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    padding-left: 240px;
+    transition: padding .2s ease-in-out;
+    .container {
+        flex: 1;
+        position: relative;
+        width: auto;
+    }
+    &.collapsed {
+        padding-left: 100px;
+        .gnb {
+            width: 100px;
+            h1 {
+                padding: 0;
+                justify-content: center;
+                img:last-child {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+            nav {
+                a {
+                    margin: 0;
+                    padding: 16px 36px;
+                }
+                span {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.gnb {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 240px;
+    min-height: 100vh;
+    border-right: 1px solid $border-deep;
+    background: $bg;
+    font-weight: 500;
+    font-size: 14px;
+    transition: width .2s ease-in-out;
+    overflow: hidden;
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0;
+        a {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            margin: 0 24px;
+            padding: 16px 24px;
+            border: 1px solid transparent;
+            color: rgba($txt-navy, 60%);
+            line-height: 1;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all .2s ease-in-out;
+            span {
+                padding-left: 10px;
+                white-space: nowrap;
+            }
+            .ion {
+                width: 24px;
+                color: darken($border-deep, 15%);
+                font-size: 24px;
+                text-align: center;
+                transition: all .2s ease-in-out;
+            }
+            &:hover {
+                color: $darkblue;
+                .ion {
+                    color: $blue;
+                }
+            }
+        }
+        &+nav {
+            border-top: 1px solid $border;
+        }
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0 50px;
+        height: 80px;
+        border-bottom: 1px solid $border;
+        img {
+            height: 24px;
+            &:last-child {
+                margin-left: 10px;
+                height: 14px;
+            }
+        }
+    }
+    .btn-collapse {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        width: 24px;
+        height: 80px;
+        background: none;
+        border: 1px dotted $border;
+        border-width: 0 0 1px 1px;
+        text-align: center;
+        cursor: col-resize;
+        input {
+            position: absolute;
+            left: -100px;
+            top: -100px;
+            &:checked+.ion {
+                transform: rotate(180deg);
+            }
+        }
+        .ion {
+            color: rgba($txt-navy, 40%);
+            font-size: 18px;
+            transform: rotate(90deg);
+            transition: all .2s ease-in-out;
+        }
+        &:hover {
+            border-color: $border-deep;
+            background: #FFF;
+        }
+    }
+}
+
+[data-nav=introduce] .gnb .nav-introduce {
+    border: 1px solid $border;
+    background: #FFF;
+    color: $txt-navy;
+    font-weight: 700;
+    nav {
+        .ion {
+            color: $blue;
+        }
+    }
+}
+
 .hero {
     position: relative;
     overflow: hidden;
@@ -68,11 +229,20 @@ a,
     // }
 }
 
-.brand {
+
+/*
+    최상단 .ribbon 리본 영역
+    공지사항 큐, 로그인 정보등을 포함함.
+*/
+
+.ribbon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 0 40px;
     height: 80px;
     border-bottom: 1px solid $border;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 80px;
     box-shadow: 0 2px #F9F9FA;
     strong {
@@ -89,7 +259,40 @@ a,
     a {
         color: $blue;
     }
+    .msg-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 24px;
+        padding: 0 16px;
+        height: 32px;
+        background: $bgblue;
+        border-radius: 16px;
+        overflow: hidden;
+        span {
+            color: $darkblue;
+            font-weight: 300;
+        }
+        .ion {
+            margin-left: 8px;
+            color: $blue;
+            font-size: 18px;
+        }
+    }
+    .account {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
+
+/*
+    section
+    기본적인 단일 페이지 컨텐츠 스타일링
+*/
 
 section {
     box-sizing: border-box;
@@ -385,6 +588,11 @@ section {
     }
 }
 
+
+/*
+    .contact 컨택트 영역
+*/
+
 .contact {
     text-align: center;
     img {
@@ -417,6 +625,12 @@ section {
         }
     }
 }
+
+
+/*
+    .cards > .card 구조
+    좌우로 들어오는 카드 디자인
+*/
 
 .cards {
     .card {
@@ -510,6 +724,12 @@ section {
     }
 }
 
+
+/*
+    .pricing 
+    가격, 멤버십, 플랜 영역
+*/
+
 .pricing {
     .pricing-plan {
         display: flex;
@@ -596,6 +816,12 @@ section {
     }
 }
 
+
+/*
+    .balloons 말풍선들
+    좌우로 들어오며 추천사 영역에 쓰임
+*/
+
 .balloons {
     list-style: none;
     margin: 0;
@@ -655,6 +881,9 @@ section {
     }
 }
 
+
+/* 주의사항 */
+
 .caution {
     margin: 120px;
     padding: 16px 32px;
@@ -678,6 +907,9 @@ section {
         word-break: keep-all;
     }
 }
+
+
+/* for avatar */
 
 .avatar {
     position: relative;
@@ -740,10 +972,12 @@ section {
     form styling
     .btn, .form-input, .form-label
     버튼, 인풋, 라벨 등
+    .btn 의 경우 .btn.btn-md.btn-kakao 처럼 중첩 선언해서 사용
 */
 
 .btn {
     box-sizing: border-box;
+    padding: 0 12px;
     height: 56px;
     border: 1px solid $border;
     background: $bg;
@@ -771,6 +1005,15 @@ section {
             background: lighten($yellow, 8%);
         }
     }
+    &-point {
+        border-color: darken($blue, 4%);
+        background: $blue;
+        color: #FFF;
+        &:hover {
+            background: darken($blue, 4%);
+            box-shadow: 0 2px 8px rgba($blue, 40%);
+        }
+    }
     &-txt {
         height: inherit;
         border: 0;
@@ -778,6 +1021,10 @@ section {
         color: $txt-navy;
         font-weight: 300;
         font-size: 12px;
+    }
+    &-md {
+        height: 32px;
+        font-size: 14px;
     }
 }
 
@@ -877,6 +1124,12 @@ section {
         }
     }
 }
+
+
+/*
+    페이지용 푸터
+    저작권 및 사업자, 약관 등의 방침을 고정.
+*/
 
 .page-footer {
     margin: 120px auto 0;
